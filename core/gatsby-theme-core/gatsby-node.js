@@ -1,5 +1,5 @@
 const fs = require("fs");
-const withDefaults = require(`./theme-options`);
+const withDefaults = require(`./theme-options.ts`);
 
 exports.onPreBootstrap = ({ reporter }, themeOptions) => {
   const { imagesPath } = withDefaults(themeOptions);

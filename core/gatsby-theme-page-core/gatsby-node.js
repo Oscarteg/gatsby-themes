@@ -1,6 +1,6 @@
-const { slugify } = require("@oscarteg/gatsby-theme-core/utils");
+const { slugify } = require("@oscarteg/gatsby-theme-core/utils.ts");
 const fs = require("fs");
-const withDefaults = require(`./theme-options`);
+const withDefaults = require(`./theme-options.ts`);
 
 exports.onPreBootstrap = ({ reporter }, themeOptions) => {
   const { contentPath } = withDefaults(themeOptions);
@@ -116,7 +116,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   pages.forEach((page) => {
     actions.createPage({
       path: page.is_front ? "/" : page.slug,
-      component: require.resolve(`./src/templates/page-query.js`),
+      component: require.resolve(`./src/templates/page-query.tsx`),
       context: {
         id: page.id,
       },

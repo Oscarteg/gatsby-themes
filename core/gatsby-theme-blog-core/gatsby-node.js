@@ -1,7 +1,7 @@
 const { paginate } = require("gatsby-awesome-pagination");
-const { slugify } = require("@oscarteg/gatsby-theme-core/utils");
+const { slugify } = require("@oscarteg/gatsby-theme-core/utils.ts");
 const fs = require("fs");
-const withDefaults = require(`./theme-options`);
+const withDefaults = require(`./theme-options.ts`);
 
 exports.onPreBootstrap = ({ reporter }, themeOptions) => {
   const { contentPath } = withDefaults(themeOptions);
@@ -139,7 +139,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
     itemsPerPage: postsPerPage,
     pathPrefix: ({ pageNumber }) =>
       pageNumber === 0 ? basePath : `${basePath}/page`,
-    component: require.resolve(`./src/templates/posts-query.js`),
+    component: require.resolve(`./src/templates/posts-query.tsx`),
     context: {
       total: posts.length,
       pageTitle,
@@ -151,7 +151,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   posts.forEach((node) => {
     actions.createPage({
       path: node.slug,
-      component: require.resolve(`./src/templates/post-query.js`),
+      component: require.resolve(`./src/templates/post-query.tsx`),
       context: {
         id: node.id,
       },
@@ -162,7 +162,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   tags.forEach((tag) => {
     actions.createPage({
       path: `${basePath}/tags/${slugify(tag.name.toLowerCase())}`,
-      component: require.resolve(`./src/templates/tag-query.js`),
+      component: require.resolve(`./src/templates/tag-query.tsx`),
       context: {
         ...tag,
       },

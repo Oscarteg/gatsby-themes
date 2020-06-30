@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "description": "A couple of gatsby themes that I personally use",
-  "main": "index.js",
+  "main": "index.ts",
   "repository": "https://github.com/oscarteg/gatsby-themes",
   "author": "Oscar te Giffel <oscar@tegiffel.com>",
   "license": "MIT",

@@ -2,7 +2,7 @@
   "name": "@oscarteg/gatsby-theme-deepmind",
   "version": "0.0.2",
   "description": "A gatsby theme for your blog",
-  "main": "index.js",
+  "main": "index.ts",
   "license": "MIT",
   "publishConfig": {
     "access": "public"

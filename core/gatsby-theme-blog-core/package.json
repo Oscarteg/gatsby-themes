@@ -3,7 +3,7 @@
   "description": "Adds a post type for Gatsby sites",
   "author": "Oscar te Giffel <oscar@tegiffel.com>",
   "version": "0.0.2",
-  "main": "index.js",
+  "main": "index.ts",
   "license": "MIT",
   "publishConfig": {
     "access": "public"

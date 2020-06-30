@@ -1,4 +1,4 @@
-const withDefaults = require(`./theme-options`);
+const withDefaults = require(`./theme-options.ts`);
 
 module.exports = (themeOptions) => {
   const { imagesPath } = withDefaults(themeOptions);

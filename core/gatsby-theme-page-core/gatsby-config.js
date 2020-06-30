@@ -1,4 +1,4 @@
-const withDefaults = require(`./theme-options`);
+const withDefaults = require(`./theme-options.ts`);
 const remarkSlug = require(`remark-slug`);
 
 module.exports = (themeOptions) => {
