@@ -4,6 +4,9 @@
   "description": "A gatsby theme for your blog",
   "main": "index.js",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "gatsby",
     "gatsby-plugin",
