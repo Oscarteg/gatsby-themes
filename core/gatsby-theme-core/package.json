@@ -1,0 +1,41 @@
+{
+  "name": "@oscarteg/gatsby-theme-core",
+  "description": "Helpers for @oscarteg/gatsby-themes packages",
+  "author": "oscarteg <oscarteg@chummun.com>",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "gatsby-theme"
+  ],
+  "bugs": {
+    "url": "https://github.com/oscarteg/gatsby-themes/issues"
+  },
+  "homepage": "https://github.com/oscarteg/gatsby-themes",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oscarteg/gatsby-themes.git",
+    "directory": "core/gatsby-theme-core"
+  },
+  "peerDependencies": {
+    "gatsby": "^2.21.11",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "gatsby": "^2.21.11",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "dependencies": {
+    "@sindresorhus/slugify": "^1.0.0",
+    "gatsby-plugin-sharp": "^2.3.4",
+    "gatsby-source-filesystem": "^2.1.39",
+    "gatsby-transformer-sharp": "^2.3.6"
+  }
+}

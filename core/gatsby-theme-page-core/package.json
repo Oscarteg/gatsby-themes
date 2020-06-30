@@ -1,0 +1,49 @@
+{
+  "name": "@oscarteg/gatsby-theme-page-core",
+  "description": "A Gatsby theme that adds MDX page support.",
+  "author": "Oscar te Giffel <oscar@tegiffel.com>",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "gatsby-theme",
+    "page"
+  ],
+  "bugs": {
+    "url": "https://github.com/oscarteg/gatsby-themes/issues"
+  },
+  "homepage": "https://github.com/oscarteg/gatsby-themes",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oscarteg/gatsby-themes.git",
+    "directory": "core/gatsby-theme-page-core"
+  },
+  "peerDependencies": {
+    "gatsby": "^2.21.11",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "gatsby": "^2.21.11",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "dependencies": {
+    "@oscarteg/gatsby-theme-core": "^0.0.1",
+    "@mdx-js/mdx": "^1.5.1",
+    "@mdx-js/react": "^1.5.1",
+    "gatsby-image": "^2.2.31",
+    "gatsby-plugin-mdx": "^1.0.56",
+    "gatsby-plugin-sharp": "^2.2.37",
+    "gatsby-remark-images": "^3.1.30",
+    "gatsby-source-filesystem": "^2.1.36",
+    "gatsby-transformer-remark": "^2.6.34",
+    "gatsby-transformer-sharp": "^2.3.3",
+    "remark-slug": "^5.1.2"
+  }
+}

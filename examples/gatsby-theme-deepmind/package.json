@@ -1,0 +1,29 @@
+{
+  "name": "@oscarteg/gatsby-example-deepmind",
+  "description": "Demo for gatsby-theme-deepmind.",
+  "private": true,
+  "version": "0.0.1",
+  "author": "Oscar te Giffel <oscar@tegiffel.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "start": "gatsby develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "dev": "gatsby clean && gatsby develop",
+    "preview": "gatsby build && gatsby serve"
+  },
+  "devDependencies": {
+    "gatsby": "^2.21.11",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "dependencies": {
+    "gatsby": "^2.21.11",
+    "@oscarteg/gatsby-theme-deepmind": "^0.0.1",
+    "@oscarteg/gatsby-theme-blog-core": "^0.0.1",
+    "@oscarteg/gatsby-theme-page-core": "^0.0.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
