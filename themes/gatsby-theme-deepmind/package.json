@@ -18,14 +18,21 @@
     "directory": "themes/gatsby-theme-deepmind"
   },
   "devDependencies": {
+    "@types/classnames": "^2.2.10",
     "gatsby": "^2.21.11",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
   "dependencies": {
+    "@tailwindcss/ui": "^0.3.0",
+    "classnames": "^2.2.6",
     "gatsby-plugin-postcss": "^2.3.6",
+    "gatsby-plugin-react-helmet": "^3.3.6",
     "gatsby-transformer-sharp": "^2.5.7",
     "prismjs": "^1.20.0",
+    "react-helmet": "^6.1.0",
+    "react-use": "^15.3.2",
+    "react-transition-group": "^4.4.1",
     "tailwindcss": "^1.4.6"
   }
 }

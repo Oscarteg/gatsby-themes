@@ -4,8 +4,9 @@
     "sourceMap": true,
     "target": "es6",
     "module": "commonjs",
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "noUnusedLocals": true
   },
-  "include": ["./core/**/*", "./themes/**/*"],
+  "include": ["./core/**/*", "./themes/**/*", "./examples/**/*"],
   "exclude": ["node_modules"]
 }

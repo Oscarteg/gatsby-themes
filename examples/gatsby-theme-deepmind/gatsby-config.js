@@ -1,9 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Phoenix.`,
-    description: `A personal blogging theme for Gatsby with great typography and dark mode.`,
+    title: `Deepmind.`,
+    description: ``,
     siteUrl: `http://localhost:8000`,
-    startUrl: `/`,
     icon: `src/images/icon.png`,
     logo: `logo.png`,
     menuLinks: [

@@ -1,2 +1,5 @@
-require("prismjs/themes/prism-okaidia.css");
-require("./src/css/style.css");
+import "prismjs/themes/prism-okaidia.css";
+import "./src/css/style.css";
+import CustomLayout from "./wrapPageElement";
+
+export const wrapPageElement = CustomLayout;
