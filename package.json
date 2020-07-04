@@ -11,7 +11,8 @@
     "bootstrap": "lerna bootstrap",
     "test": "jest",
     "test:watch": "jest --watch",
-    "examples:deepmind": "yarn workspace @oscarteg/gatsby-example-deepmind"
+    "examples:deepmind": "yarn workspace @oscarteg/gatsby-example-deepmind",
+    "examples:showoff": "yarn workspace @oscarteg/gatsby-example-showoff"
   },
   "workspaces": [
     "examples/*",

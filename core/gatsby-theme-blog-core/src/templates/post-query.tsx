@@ -1,8 +1,8 @@
-import React from "react"
-import { graphql } from "gatsby"
-import Post from "../components/post"
+import React from "react";
+import { graphql } from "gatsby";
+import Post from "../components/Post";
 
-export default ({ data }) => <Post {...data.post} />
+export default ({ data }) => <Post {...data.post} />;
 
 export const query = graphql`
   query($id: String) {
@@ -10,4 +10,4 @@ export const query = graphql`
       ...PostFragment
     }
   }
-`
+`;

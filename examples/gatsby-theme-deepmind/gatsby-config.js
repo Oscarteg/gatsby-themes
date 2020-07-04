@@ -14,6 +14,10 @@ module.exports = {
         name: `Blog`,
         link: `/blog`,
       },
+      {
+        name: `About`,
+        link: `/about`,
+      },
     ],
   },
   plugins: [
