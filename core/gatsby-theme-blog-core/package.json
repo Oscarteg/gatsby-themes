@@ -2,7 +2,7 @@
   "name": "@oscarteg/gatsby-theme-blog-core",
   "description": "Adds a post type for Gatsby sites",
   "author": "Oscar te Giffel <oscar@tegiffel.com>",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "index.ts",
   "license": "MIT",
   "publishConfig": {
@@ -36,7 +36,7 @@
   "dependencies": {
     "@mdx-js/mdx": "^1.5.1",
     "@mdx-js/react": "^1.5.1",
-    "@oscarteg/gatsby-theme-core": "^0.0.2",
+    "@oscarteg/gatsby-theme-core": "^0.0.3",
     "gatsby-awesome-pagination": "^0.3.5",
     "gatsby-image": "^2.2.31",
     "gatsby-plugin-feed": "^2.3.21",

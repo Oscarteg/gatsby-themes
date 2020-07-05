@@ -2,7 +2,7 @@
   "name": "@oscarteg/gatsby-example-deepmind",
   "description": "Demo for gatsby-theme-deepmind.",
   "private": true,
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Oscar te Giffel <oscar@tegiffel.com>",
   "license": "MIT",
   "scripts": {
@@ -19,9 +19,9 @@
     "react-dom": "^16.13.1"
   },
   "dependencies": {
-    "@oscarteg/gatsby-theme-blog-core": "^0.0.2",
-    "@oscarteg/gatsby-theme-deepmind": "^0.0.2",
-    "@oscarteg/gatsby-theme-page-core": "^0.0.2",
+    "@oscarteg/gatsby-theme-blog-core": "^0.0.3",
+    "@oscarteg/gatsby-theme-deepmind": "^0.0.3",
+    "@oscarteg/gatsby-theme-page-core": "^0.0.3",
     "gatsby": "^2.21.11",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
