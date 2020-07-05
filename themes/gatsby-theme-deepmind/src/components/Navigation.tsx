@@ -7,9 +7,14 @@ import { useClickAway } from "react-use";
 interface NavigationProps {
   title: string;
   menuLinks: [{ name: string; link: string }];
+  socialLinks: { name: string; url: string; icon: string }[];
 }
 
-export default function Navigation({ title, menuLinks }: NavigationProps) {
+export default function Navigation({
+  title,
+  menuLinks,
+  socialLinks,
+}: NavigationProps) {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const mobileMenu = useRef(null);
 
@@ -37,6 +42,31 @@ export default function Navigation({ title, menuLinks }: NavigationProps) {
                 </Link>
               ))}
             </div>
+            <nav className="flex justify-center mt-4 md:mt-0">
+              <ul className="flex items-center">
+                {socialLinks &&
+                  socialLinks.map(({ name, url, icon }) => (
+                    <li key={name} className="ml-6">
+                      <a
+                        href={url}
+                        className="text-dark hover:text-primary dark:text-white dark-hover:text-primary"
+                        aria-label={`Follow on ${name}`}
+                      >
+                        <span className="hidden">{name}</span>
+                      </a>
+                    </li>
+                  ))}
+
+                <li className="ml-6">
+                  <a
+                    href="/rss.xml"
+                    className="text-dark hover:text-primary dark:text-white"
+                    title="RSS feed"
+                    aria-label="RSS feed"
+                  ></a>
+                </li>
+              </ul>
+            </nav>
           </div>
 
           <div className="-mr-2 flex items-center sm:hidden">

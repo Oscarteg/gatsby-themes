@@ -3,7 +3,6 @@ import { MDXProvider } from "@mdx-js/react";
 import Navigation from "./Navigation";
 import { useStaticQuery, graphql } from "gatsby";
 import Seo from "./Seo";
-import Helmet from "react-helmet";
 import Head from "./Head";
 
 export default function Layout({ children }: { children: ReactNode }) {
@@ -14,6 +13,11 @@ export default function Layout({ children }: { children: ReactNode }) {
           siteMetadata {
             title
             description
+            socialLinks {
+              name
+              url
+              icon
+            }
             menuLinks {
               name
               link
@@ -28,7 +32,7 @@ export default function Layout({ children }: { children: ReactNode }) {
     title,
     description,
     // copyright,
-    // socialLinks,
+    socialLinks,
     menuLinks,
   } = data.allSite.nodes[0].siteMetadata;
 
@@ -42,7 +46,11 @@ export default function Layout({ children }: { children: ReactNode }) {
           class: "antialiased bg-white dark:bg-dark px-4",
         }}
       />
-      <Navigation title={title} menuLinks={menuLinks} />
+      <Navigation
+        title={title}
+        menuLinks={menuLinks}
+        socialLinks={socialLinks}
+      />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <main className="max-w-7xl mx-auto sm:px-6 lg:px-8">
           <MDXProvider>{children}</MDXProvider>

@@ -19,6 +19,23 @@ module.exports = {
         link: `/about`,
       },
     ],
+    socialLinks: [
+      {
+        name: `Twitter`,
+        url: `https://twitter.com/oscartegiffel`,
+        icon: `twitter`,
+      },
+      {
+        name: `Github`,
+        url: `https://github.com/oscarteg`,
+        icon: `github`,
+      },
+      {
+        name: `Youtube`,
+        url: `https://youtube.com`,
+        icon: `youtube`,
+      },
+    ],
   },
   plugins: [
     // This is a list of all themes that this starter is using.
