@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import Img from "gatsby-image";
 
-export default ({ title, slug, image, date, excerpt }) => {
+export default function PostTile({ title, slug, image, date, excerpt }) {
   excerpt = excerpt.length > 150 ? excerpt.substr(0, 150) + "..." : excerpt;
   return (
     <Link
@@ -22,7 +22,10 @@ export default ({ title, slug, image, date, excerpt }) => {
           )}
         </div>
         <div className="md:w-1/2 py-4 md:py-0 lg:py-6 md:pl-4 lg:pl-2">
-          <h2 className="text-text dark:text-white">{title}</h2>
+          <h2
+            dangerouslySetInnerHTML={{ __html: title }}
+            className="text-text dark:text-white"
+          />
           <small className="mt-2 block">{date}</small>
 
           {excerpt && (
@@ -35,4 +38,4 @@ export default ({ title, slug, image, date, excerpt }) => {
       </article>
     </Link>
   );
-};
+}

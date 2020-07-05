@@ -24,17 +24,19 @@ export default ({ title, excerpt, image, tags, caption, date, body }) => {
     : null;
 
   return (
-    <Layout>
-      <article className="post mb-12 md:mb-24">
-        <div className="text-center lg:w-4/5 mx-auto">
-          <p className="small">{date}</p>
-          <h1 className="mt-2">
-            <span>{title}</span>
-          </h1>
-          {excerpt && <p className="lead mt-4">{excerpt}</p>}
-        </div>
+    <article className="post mb-12 md:mb-24">
+      <div className="text-center lg:w-4/5 mx-auto">
+        <p className="small">{date}</p>
+        <h1 className="mt-2" dangerouslySetInnerHTML={{ __html: title }} />
+        {excerpt && (
+          <p
+            className="lead mt-4"
+            dangerouslySetInnerHTML={{ __html: excerpt }}
+          />
+        )}
+      </div>
 
-        {/* {image.full && (
+      {/* {image.full && (
           <figure className="mt-8 mb-10 md:mt-16 mt:mb-20">
             <Img
               fluid={image.full.fluid}
@@ -48,18 +50,17 @@ export default ({ title, excerpt, image, tags, caption, date, body }) => {
           </figure>
         )} */}
 
-        <div className="lg:w-4/5 my-6 mx-auto content">
-          {body && <MDXRenderer>{body}</MDXRenderer>}
-        </div>
+      <div className="lg:w-4/5 my-6 mx-auto content">
+        {body && <MDXRenderer>{body}</MDXRenderer>}
+      </div>
 
-        <div className="lg:w-4/5 mx-auto">
-          {tags && (
-            <div className="text-sm mt-8 pt-8 md:mt-16 md:pt-16 border-t border-offwhite dark:border-text text-text dark:text-white">
-              Tagged with {tagLinks}
-            </div>
-          )}
-        </div>
-      </article>
-    </Layout>
+      <div className="lg:w-4/5 mx-auto">
+        {tags && (
+          <div className="text-sm mt-8 pt-8 md:mt-16 md:pt-16 border-t border-offwhite dark:border-text text-text dark:text-white">
+            Tagged with {tagLinks}
+          </div>
+        )}
+      </div>
+    </article>
   );
 };

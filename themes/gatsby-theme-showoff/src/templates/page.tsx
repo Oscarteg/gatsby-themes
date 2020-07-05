@@ -12,7 +12,6 @@ const Page: React.FunctionComponent<PageProps> = ({ data, location }) => {
   const { html, frontmatter, fields } = data.markdownRemark
   const { title, description } = frontmatter
 
-  console.log('asdasdage')
   return (
     <Layout location={location}>
       <SEO

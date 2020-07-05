@@ -70,6 +70,14 @@ exports.onCreateNode = async (
     return;
   }
 
+  // ! Dont create posts when production and is draft.
+  if (
+    node.frontmatter.draft === true &&
+    process.node.NODE_ENV === "production"
+  ) {
+    return;
+  }
+
   const { basePath } = withDefaults(themeOptions);
   const nodeType = `Post`;
 

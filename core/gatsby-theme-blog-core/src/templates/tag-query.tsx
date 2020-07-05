@@ -1,10 +1,10 @@
-import React from "react"
-import { graphql } from "gatsby"
-import Tag from "../components/tag"
+import React from "react";
+import { graphql } from "gatsby";
+import Tag from "../components/Tag";
 
 export default ({ pageContext, data }) => (
   <Tag name={pageContext.name} posts={data.allPost.posts} />
-)
+);
 
 export const query = graphql`
   query($name: String!) {
@@ -17,4 +17,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

@@ -3,6 +3,8 @@ import { MDXProvider } from "@mdx-js/react";
 import Navigation from "./Navigation";
 import { useStaticQuery, graphql } from "gatsby";
 import Seo from "./Seo";
+import Helmet from "react-helmet";
+import Head from "./Head";
 
 export default function Layout({ children }: { children: ReactNode }) {
   const data = useStaticQuery(graphql`
@@ -32,6 +34,7 @@ export default function Layout({ children }: { children: ReactNode }) {
 
   return (
     <div className="min-h-screen bg-white">
+      <Head />
       <Seo
         title={title}
         description={description}
@@ -41,15 +44,8 @@ export default function Layout({ children }: { children: ReactNode }) {
       />
       <Navigation title={title} menuLinks={menuLinks} />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <header>
-          {/* <h1 className="text-3xl font-bold leading-tight text-gray-900">
-          {title}
-        </h1> */}
-        </header>
-        <main>
-          <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <MDXProvider>{children}</MDXProvider>
-          </div>
+        <main className="max-w-7xl mx-auto sm:px-6 lg:px-8">
+          <MDXProvider>{children}</MDXProvider>
         </main>
       </div>
     </div>
