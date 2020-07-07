@@ -3,6 +3,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx";
 import React from "react";
 import slugify from "slugify";
 import Img from "gatsby-image";
+import PageTitle from "../../../components/PageTitle";
 
 export default function Post({
   title,
@@ -30,18 +31,12 @@ export default function Post({
       })
     : null;
 
-  console.log("Asdasd", image);
   return (
     <article className="post mb-12 md:mb-24">
       <div className="text-center lg:w-4/5 mx-auto">
-        <p className="small">{date}</p>
-        <h1 className="mt-2" dangerouslySetInnerHTML={{ __html: title }} />
-        {excerpt && (
-          <p
-            className="lead mt-4"
-            dangerouslySetInnerHTML={{ __html: excerpt }}
-          />
-        )}
+        <PageTitle title={title} excerpt={excerpt}>
+          <p className="small">{date}</p>
+        </PageTitle>
       </div>
 
       {image?.full && (
