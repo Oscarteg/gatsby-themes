@@ -8,5 +8,5 @@
 
 // When service werker is updated, reload the new information
 exports.onServiceWorkerUpdateFound = () => {
-  window.location.reload()
-}
+  window.location.reload();
+};

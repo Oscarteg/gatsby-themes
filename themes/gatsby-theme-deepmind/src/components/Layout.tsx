@@ -21,6 +21,7 @@ export default function Layout({ children }: { children: ReactNode }) {
             menuLinks {
               name
               link
+              partiallyActive
             }
           }
         }
@@ -37,13 +38,13 @@ export default function Layout({ children }: { children: ReactNode }) {
   } = data.allSite.nodes[0].siteMetadata;
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen">
       <Head />
       <Seo
         title={title}
         description={description}
         bodyAttributes={{
-          class: "antialiased bg-white dark:bg-dark px-4",
+          class: "antialiased bg-gray-50",
         }}
       />
       <Navigation
@@ -51,8 +52,8 @@ export default function Layout({ children }: { children: ReactNode }) {
         menuLinks={menuLinks}
         socialLinks={socialLinks}
       />
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <main className="max-w-7xl mx-auto sm:px-6 lg:px-8">
+      <div className="container">
+        <main className="max-w-7xl mx-auto sm:px-6 lg:px-8 mt-7">
           <MDXProvider>{children}</MDXProvider>
         </main>
       </div>

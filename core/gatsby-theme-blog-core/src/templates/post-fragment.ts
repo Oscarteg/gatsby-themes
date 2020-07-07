@@ -1,4 +1,4 @@
-import { graphql } from "gatsby"
+import { graphql } from "gatsby";
 
 export const fragment = graphql`
   fragment PostFragment on Post {
@@ -40,4 +40,4 @@ export const fragment = graphql`
       }
     }
   }
-`
+`;

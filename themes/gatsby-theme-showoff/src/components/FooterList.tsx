@@ -7,7 +7,7 @@ const FooterList = ({ title, items }) => (
       {title}
     </h4>
     <ul className="tracking-wide font-hairline list-reset">
-      {items.map(item => (
+      {items.map((item) => (
         <li key={item}>
           <FontAwesomeIcon icon={['fas', 'check']} className="fa-xs" />
           <span>{item}</span>

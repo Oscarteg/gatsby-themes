@@ -3,7 +3,7 @@ module.exports = {
     title: `Deepmind.`,
     description: ``,
     siteUrl: `http://localhost:8000`,
-    icon: `src/images/icon.png`,
+    // icon: `src/images/icon.png`,
     logo: `logo.png`,
     menuLinks: [
       {
@@ -13,10 +13,15 @@ module.exports = {
       {
         name: `Blog`,
         link: `/blog`,
+        partiallyActive: true,
       },
       {
         name: `About`,
         link: `/about`,
+      },
+      {
+        name: `Projects`,
+        link: `/projects`,
       },
     ],
     socialLinks: [
@@ -42,7 +47,7 @@ module.exports = {
     // To disable a theme, remove it here and run `yarn remove @arshad/gatsby-theme-NAME`.
     `@oscarteg/gatsby-theme-blog-core`,
     `@oscarteg/gatsby-theme-page-core`,
-    // `@arshad/gatsby-theme-portfolio-core`,
+    `@oscarteg/gatsby-theme-portfolio-core`,
     // `@arshad/gatsby-theme-photo-core`,
     `@oscarteg/gatsby-theme-deepmind`,
   ],

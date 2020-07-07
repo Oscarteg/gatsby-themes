@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+a {
+  @apply transition ease-in-out duration-150;
+}
+
 h1,
 h2,
 h3,
@@ -17,4 +21,13 @@ h1 span {
     rgba(60, 100, 241, 0.4) 35%,
     transparent 0
   );
+}
+
+p {
+  @apply mt-5;
+}
+
+pre,
+code {
+  @apply overflow-scroll mt-5;
 }

@@ -1,4 +1,4 @@
-module.exports = themeOptions => ({
+module.exports = (themeOptions) => ({
   contentPath: `content/pages`,
   ...themeOptions,
-})
+});

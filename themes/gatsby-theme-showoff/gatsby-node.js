@@ -40,7 +40,7 @@ exports.createPages = ({ graphql, actions }) => {
         }
       }
     `
-  ).then(result => {
+  ).then((result) => {
     if (result.errors) {
       throw result.errors
     }
@@ -66,7 +66,7 @@ exports.createPages = ({ graphql, actions }) => {
 
     const pages = result.data.pages.edges
 
-    pages.forEach(page => {
+    pages.forEach((page) => {
       createPage({
         path: page.node.fields.slug,
         component: path.resolve(`./src/templates/page.tsx`),

@@ -1,7 +1,7 @@
-module.exports = themeOptions => ({
+module.exports = (themeOptions) => ({
   contentPath: `content/projects`,
-  basePath: `/portfolio`,
+  basePath: `/projects`,
   pageTitle: `Portfolio`,
   pageExcerpt: `Maiores corrupti iure amet inventore maxime ut.`,
   ...themeOptions,
-})
+});

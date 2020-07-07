@@ -1,11 +1,18 @@
-import React from "react";
-import { MDXRenderer } from "gatsby-plugin-mdx";
-import Img from "gatsby-image";
-import slugify from "slugify";
 import { Link } from "gatsby";
-import Layout from "../../../components/layout";
+import { MDXRenderer } from "gatsby-plugin-mdx";
+import React from "react";
+import slugify from "slugify";
+import Img from "gatsby-image";
 
-export default ({ title, excerpt, image, tags, caption, date, body }) => {
+export default function Post({
+  title,
+  excerpt,
+  image,
+  tags,
+  caption,
+  date,
+  body,
+}) {
   const tagLinks = tags
     ? tags.map((tag, i) => {
         const divider = i < tags.length - 1 && <span>{`, `}</span>;
@@ -23,6 +30,7 @@ export default ({ title, excerpt, image, tags, caption, date, body }) => {
       })
     : null;
 
+  console.log("Asdasd", image);
   return (
     <article className="post mb-12 md:mb-24">
       <div className="text-center lg:w-4/5 mx-auto">
@@ -36,19 +44,19 @@ export default ({ title, excerpt, image, tags, caption, date, body }) => {
         )}
       </div>
 
-      {/* {image.full && (
-          <figure className="mt-8 mb-10 md:mt-16 mt:mb-20">
-            <Img
-              fluid={image.full.fluid}
-              className="rounded-sm"
-              title={title}
-              alt={caption || title}
-            />
-            {caption && (
-              <figcaption dangerouslySetInnerHTML={{ __html: caption }} />
-            )}
-          </figure>
-        )} */}
+      {image?.full && (
+        <figure className="mt-8 mb-10 md:mt-16 mt:mb-20">
+          <Img
+            fluid={image.full.fluid}
+            className="rounded-sm"
+            title={title}
+            alt={caption || title}
+          />
+          {caption && (
+            <figcaption dangerouslySetInnerHTML={{ __html: caption }} />
+          )}
+        </figure>
+      )}
 
       <div className="lg:w-4/5 my-6 mx-auto content">
         {body && <MDXRenderer>{body}</MDXRenderer>}
@@ -63,4 +71,4 @@ export default ({ title, excerpt, image, tags, caption, date, body }) => {
       </div>
     </article>
   );
-};
+}

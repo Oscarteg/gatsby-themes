@@ -1,6 +1,7 @@
 import React from "react";
 import Pager from "./Pager";
 import PostTile from "./PostTile";
+import PageTitle from "../../../components/PageTitle";
 
 export default function Posts({
   posts,
@@ -11,8 +12,11 @@ export default function Posts({
 }) {
   return (
     <>
-      {posts && posts.map((post) => <PostTile {...post} key={post.id} />)}
-      <Pager {...{ previousPagePath, nextPagePath }}></Pager>
+      <PageTitle title={pageTitle} excerpt={pageExcerpt} />
+      <div className="grid gap-4">
+        {posts && posts.map((post) => <PostTile {...post} key={post.id} />)}
+      </div>
+      <Pager {...{ previousPagePath, nextPagePath }} />
     </>
   );
 }

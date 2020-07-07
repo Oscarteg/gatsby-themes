@@ -13,13 +13,33 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "examples:deepmind": "yarn workspace @oscarteg/gatsby-example-deepmind",
-    "examples:showoff": "yarn workspace @oscarteg/gatsby-example-showoff"
+    "examples:showoff": "yarn workspace @oscarteg/gatsby-example-showoff",
+    "format": "prettier --write \"**/*.{ts,tsx,mdx,md,scss,js}\"",
+    "lint:fix": "eslint --fix \"**/*.{ts,tsx}\""
   },
   "workspaces": [
     "examples/*",
     "core/*",
     "themes/*"
   ],
+  "lint-staged": {
+    "*.{js,jsx,json,md,yml,ts,tsx}": [
+      "prettier --write"
+    ],
+    "*.{ts,tsx}": [
+      "eslint --fix",
+      "yarn test --bail --findRelatedTests"
+    ]
+  },
+  "engines": {
+    "node": ">=12.16.0",
+    "yarn": ">=1.22.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.11.0",
     "@testing-library/react": "^10.4.3",
@@ -28,12 +48,14 @@
     "@types/react": "^16.9.41",
     "@types/react-dom": "^16.9.8",
     "cypress": "^4.9.0",
-    "eslint": "^7.3.1",
+    "eslint": "^7.2.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-prettier": "^3.1.4",
-    "eslint-plugin-react": "^7.20.2",
-    "eslint-plugin-react-hooks": "^4.0.4",
+    "eslint-plugin-react": "^7.20.3",
+    "eslint-plugin-react-hooks": "^4.0.0",
     "husky": "^4.2.5",
     "jest": "^26.1.0",
     "lerna": "^3.22.1",

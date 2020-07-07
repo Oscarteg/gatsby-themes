@@ -27,7 +27,7 @@ const Bio = () => (
         }
       }
     `}
-    render={data => {
+    render={(data) => {
       const {
         twitter,
         linkedin,

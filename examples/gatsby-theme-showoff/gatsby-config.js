@@ -19,7 +19,13 @@ module.exports = {
     // To disable a theme, remove it here and run `yarn remove @arshad/gatsby-theme-NAME`.
     // `@oscarteg/gatsby-theme-blog-core`,
     `@oscarteg/gatsby-theme-page-core`,
-    `@oscarteg/gatsby-theme-portfolio-core`,
+    // `@oscarteg/gatsby-theme-portfolio-core`,
+    {
+      resolve: `gatsby-source-portfolio`,
+      options: {
+        basePath: "/portfolio",
+      },
+    },
     // `@arshad/gatsby-theme-photo-core`,
     `@oscarteg/gatsby-theme-showoff`,
   ],

@@ -11,7 +11,7 @@ module.exports = {
       linkedin: `otegiffel`,
       github: `oscarteg`,
       gitlab: `oscarteg`,
-      blog: `https://blog.oscartegiffel.com`
+      blog: `https://blog.oscartegiffel.com`,
     },
   },
   plugins: [

@@ -1,6 +1,6 @@
 import React from 'react'
-import FooterList from './FooterList'
 import { StaticQuery, graphql, navigate, Link } from 'gatsby'
+import FooterList from './FooterList'
 
 const Footer = () => (
   <StaticQuery
@@ -16,12 +16,12 @@ const Footer = () => (
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <footer className="bg-gray-300 mt-24">
         <div className="max-w-3xl mx-auto pt-2">
           <div className="md:flex mb-4 text-center md:text-left justify-center">
             <FooterList
-              title={`Frontend`}
+              title="Frontend"
               items={[
                 `ES 5/6/7 en Typescript`,
                 `React (Redux / GatsbyJs / SPA met React Router)`,
@@ -35,12 +35,12 @@ const Footer = () => (
             />
 
             <FooterList
-              title={`Backend`}
+              title="Backend"
               items={[`PHP (Laravel)`, `Java`, `GoLang (beginner)`]}
             />
 
             <FooterList
-              title={`Database/Devops`}
+              title="Database/Devops"
               items={[
                 `Docker`,
                 `Gitlab CI/CD`,
@@ -66,20 +66,14 @@ const Footer = () => (
                 </a>
               </div>
               <div className="flex justify-center">
-                <Link
-                  className={`border-l-2 border-r-2 mx-1 px-1`}
-                  to={`/uses`}
-                >
+                <Link className="border-l-2 border-r-2 mx-1 px-1" to="/uses">
                   Uses
                 </Link>
-                <Link
-                  className={`border-l-2 border-r-2 mx-1 px-1`}
-                  to={`/about`}
-                >
+                <Link className="border-l-2 border-r-2 mx-1 px-1" to="/about">
                   About
                 </Link>
                 <a
-                  className={`border-l-2 border-r-2 mx-1 px-1`}
+                  className="border-l-2 border-r-2 mx-1 px-1"
                   target="_blank"
                   rel="noopener noreferrer"
                   href={data.site.siteMetadata.social.blog}
@@ -88,7 +82,7 @@ const Footer = () => (
                 </a>
 
                 <a
-                  className={`border-l-2 border-r-2 mx-1 px-1`}
+                  className="border-l-2 border-r-2 mx-1 px-1"
                   target="_blank"
                   rel="noopener noreferrer"
                   href={data.site.siteMetadata.social.resume}
@@ -97,8 +91,8 @@ const Footer = () => (
                 </a>
 
                 <Link
-                  className={`border-l-2 border-r-2 mx-1 px-1`}
-                  to={`/other-projects`}
+                  className="border-l-2 border-r-2 mx-1 px-1"
+                  to="/other-projects"
                 >
                   Andere projecten
                 </Link>

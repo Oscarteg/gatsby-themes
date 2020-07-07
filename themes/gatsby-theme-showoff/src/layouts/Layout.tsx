@@ -36,7 +36,7 @@ const Layout: React.FunctionComponent<LayoutProps> = ({
           }
         }
       `}
-      render={data => {
+      render={(data) => {
         const { title } = data.site.siteMetadata
 
         return (

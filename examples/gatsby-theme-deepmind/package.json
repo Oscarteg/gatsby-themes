@@ -22,6 +22,7 @@
     "@oscarteg/gatsby-theme-blog-core": "^0.0.3",
     "@oscarteg/gatsby-theme-deepmind": "^0.0.3",
     "@oscarteg/gatsby-theme-page-core": "^0.0.3",
+    "@oscarteg/gatsby-theme-portfolio-core": "^0.0.2",
     "gatsby": "^2.21.11",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"

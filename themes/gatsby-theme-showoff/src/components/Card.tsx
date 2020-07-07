@@ -30,7 +30,7 @@ const Card: React.StatelessComponent<CardProps> = ({
       <h3 className="my-1 text-xl inline-block text-black">{title}</h3>
       <p className="text-gray-600 my-4 text-base">{description}</p>
 
-      {tags.map(tag => (
+      {tags.map((tag) => (
         <Tag tag={tag} key={tag} />
       ))}
     </div>

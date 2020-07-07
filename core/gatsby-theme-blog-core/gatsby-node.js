@@ -1,6 +1,7 @@
 const { paginate } = require("gatsby-awesome-pagination");
 const { slugify } = require("@oscarteg/gatsby-theme-core/utils.ts");
 const fs = require("fs");
+
 const withDefaults = require(`./theme-options.ts`);
 
 exports.onPreBootstrap = ({ reporter }, themeOptions) => {

@@ -1,9 +1,9 @@
 import React from 'react'
 
-import Layout from '../layouts/Layout'
-import SEO from '../components/Seo'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { navigate } from 'gatsby'
+import Layout from '../layouts/Layout.tsx'
+import SEO from '../components/Seo'
 
 const NotFoundPage = ({ location }) => (
   <Layout location={location} className="text-center">

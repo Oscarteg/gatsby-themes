@@ -24,7 +24,7 @@ const IndexPage: React.StatelessComponent<IndexPageProps> = ({
         keywords={[`homepage`, `oscar te giffel`, `gatsby`]}
         description={data.site.description}
       />
-      {projects.map(project => {
+      {projects.map((project) => {
         const { title, image, tags, description } = project.node.frontmatter
         const { slug } = project.node.fields
 

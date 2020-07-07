@@ -1,6 +1,7 @@
-const { slugify } = require("@oscarteg/gatsby-theme-core/utils");
+const { slugify } = require("@oscarteg/gatsby-theme-core/utils.ts");
 const fs = require("fs");
-const withDefaults = require(`./theme-options`);
+
+const withDefaults = require(`./theme-options.ts`);
 
 exports.onPreBootstrap = ({ reporter }, themeOptions) => {
   const { contentPath } = withDefaults(themeOptions);
@@ -40,7 +41,7 @@ const mdxResolverPassthrough = (fieldName) => async (
     id: source.parent,
   });
   const resolver = type.getFields()[fieldName].resolve;
-  return await resolver(mdxNode, args, context, {
+  return resolver(mdxNode, args, context, {
     fieldName,
   });
 };
@@ -113,7 +114,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   projects.forEach((project) => {
     actions.createPage({
       path: project.slug,
-      component: require.resolve(`./src/templates/project-query.js`),
+      component: require.resolve(`./src/templates/project-query.tsx`),
       context: {
         id: project.id,
       },
@@ -124,7 +125,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   const { pageTitle, pageExcerpt, basePath } = withDefaults(themeOptions);
   actions.createPage({
     path: basePath,
-    component: require.resolve(`./src/templates/projects-query.js`),
+    component: require.resolve(`./src/templates/projects-query.tsx`),
     context: {
       pageTitle,
       pageExcerpt,

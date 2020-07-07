@@ -5,17 +5,20 @@
 This is my own homepage created in **Gatsby**
 
 ## Develop
+
 ```
 yarn install
 yarn dev
 ```
 
 ## Production
+
 ```
 yarn build
 ```
 
 To serve the production build
+
 ```
 yarn serve
 ```
