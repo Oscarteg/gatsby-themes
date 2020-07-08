@@ -2,7 +2,7 @@
   "name": "@oscarteg/gatsby-theme-portfolio-core",
   "description": "Portfolio functionality for Gatsby sites",
   "author": "Oscar te Giffel <oscar@tegiffel.com>",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "index.ts",
   "license": "MIT",
   "publishConfig": {
@@ -36,7 +36,7 @@
   "dependencies": {
     "@mdx-js/mdx": "^1.5.1",
     "@mdx-js/react": "^1.5.1",
-    "@oscarteg/gatsby-theme-core": "^0.0.3",
+    "@oscarteg/gatsby-theme-core": "^0.0.4",
     "gatsby-image": "^2.2.31",
     "gatsby-plugin-mdx": "^1.0.56",
     "gatsby-plugin-sharp": "^2.2.37",
