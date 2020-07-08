@@ -18,6 +18,7 @@ module.exports = {
         crossOrigin: `use-credentials`,
       },
     },
+    `@oscarteg/gatsby-theme-core`,
     `@oscarteg/gatsby-theme-blog-core`,
     `@oscarteg/gatsby-theme-page-core`,
     `@oscarteg/gatsby-theme-portfolio-core`,

@@ -4,6 +4,7 @@ import Navigation from "./Navigation";
 import { useStaticQuery, graphql } from "gatsby";
 import Seo from "./Seo";
 import Head from "./Head";
+import Footer from "./Footer";
 
 export default function Layout({ children }: { children: ReactNode }) {
   const data = useStaticQuery(graphql`
@@ -38,13 +39,13 @@ export default function Layout({ children }: { children: ReactNode }) {
   } = data.allSite.nodes[0].siteMetadata;
 
   return (
-    <>
+    <div className="min-h-screen bg-gray-50 flex flex-col">
       <Head />
       <Seo
         title={title}
         description={description}
         bodyAttributes={{
-          class: "antialiased min-h-screen bg-gray-50",
+          class: "antialiased ",
         }}
       />
       <Navigation
@@ -52,11 +53,10 @@ export default function Layout({ children }: { children: ReactNode }) {
         menuLinks={menuLinks}
         socialLinks={socialLinks}
       />
-      <div className="container">
-        <main className="max-w-7xl mx-auto sm:px-6 lg:px-8 mt-7">
-          <MDXProvider>{children}</MDXProvider>
-        </main>
-      </div>
-    </>
+      <main className="container flex-grow">
+        <MDXProvider>{children}</MDXProvider>
+      </main>
+      <Footer />
+    </div>
   );
 }

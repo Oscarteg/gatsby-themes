@@ -1,6 +1,16 @@
 import React from "react";
-import { Helmet } from "react-helmet";
+import { Helmet, HtmlProps, BodyProps } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
+
+interface SeoProps {
+  title: string;
+  description: string;
+  image?: string;
+  type?: string;
+  htmlAttributes?: HtmlProps;
+  bodyAttributes?: BodyProps;
+  url?: string;
+}
 
 export default ({
   title,
@@ -10,7 +20,7 @@ export default ({
   type = `article`,
   htmlAttributes,
   bodyAttributes,
-}: any) => {
+}: SeoProps) => {
   const data = useStaticQuery(graphql`
     {
       site {

@@ -1,12 +1,15 @@
 import React from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
-import { Footer as ShowOffFooter } from "@oscarteg/gatsby-theme-showoff";
+import ShowOffFooter from "@oscarteg/gatsby-theme-showoff/src/components/Footer";
 
 export type FooterProps = {};
 
 export default function Footer(props: FooterProps) {
   const data = useStaticQuery(graphql`
     {
+      currentBuildDate {
+        currentDate
+      }
       site {
         siteMetadata {
           repoUrl

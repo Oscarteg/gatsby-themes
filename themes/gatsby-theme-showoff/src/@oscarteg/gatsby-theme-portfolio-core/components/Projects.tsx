@@ -34,7 +34,7 @@ export default function Projects({ projects }: ProjectsProps) {
         keywords={[`homepage`, `oscar te giffel`, `gatsby`]}
         description={description}
       />
-      <div className="grid grid-cols-2 gap-4">
+      <div className="sm:grid grid-cols-2 gap-4">
         {projects.map((project) => {
           return <ProjectTile {...project} key={project.id} />;
         })}
