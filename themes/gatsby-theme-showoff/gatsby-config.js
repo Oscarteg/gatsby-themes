@@ -34,7 +34,7 @@ module.exports = {
     {
       resolve: `@oscarteg/gatsby-theme-portfolio-core`,
       options: {
-        basePath: "",
+        basePath: "/",
       },
     },
   ],
