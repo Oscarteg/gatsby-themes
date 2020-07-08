@@ -9,7 +9,6 @@ export default function ProjectTile({
   slug,
   ...props
 }: ProjectTileProps) {
-  console.log(props);
   return (
     <div className="bg-white shadow overflow-hidden sm:rounded-lg">
       <div className="px-4 py-5 border-b border-gray-200 sm:px-6">

@@ -26,7 +26,6 @@ export default function Projects({ projects }: ProjectsProps) {
     }
   `);
 
-  console.log(projects, data);
   const { title, description } = data.site.siteMetadata;
   return (
     <>

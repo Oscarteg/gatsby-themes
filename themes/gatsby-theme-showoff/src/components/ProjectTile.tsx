@@ -19,7 +19,6 @@ export default function ProjectTile({
   excerpt,
   tags,
 }: ProjectTileProps) {
-  console.log(slug);
   return (
     <Link to={slug}>
       <div className="card bg-white rounded shadow block flex-1 border-b-2 border-yellow-200 h-full">

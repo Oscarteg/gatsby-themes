@@ -9,7 +9,6 @@ export type TagProps = {
 };
 
 export default function Tag({ name, posts, ...props }: TagProps) {
-  console.log(props);
   return (
     <div className="text-center">
       {name && (

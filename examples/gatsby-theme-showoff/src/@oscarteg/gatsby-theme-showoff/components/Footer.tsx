@@ -1,0 +1,73 @@
+import React from "react";
+import { useStaticQuery, graphql, Link } from "gatsby";
+import { Footer as ShowOffFooter } from "@oscarteg/gatsby-theme-showoff";
+
+export type FooterProps = {};
+
+export default function Footer(props: FooterProps) {
+  const data = useStaticQuery(graphql`
+    {
+      site {
+        siteMetadata {
+          repoUrl
+          social {
+            blog
+          }
+        }
+      }
+    }
+  `);
+
+  return (
+    <ShowOffFooter>
+      <div>
+        <div className="flex justify-center align-center text-grey font-hairline text-sm text-center">
+          <div className="py-8">
+            <div className="mb-2">
+              © Copyright - {new Date().getFullYear()} - Source on{" "}
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href={data.site.siteMetadata.github}
+              >
+                github
+              </a>
+            </div>
+            <div className="flex justify-center">
+              <Link className="border-l-2 border-r-2 mx-1 px-1" to="/uses">
+                Uses
+              </Link>
+              <Link className="border-l-2 border-r-2 mx-1 px-1" to="/about">
+                About
+              </Link>
+              <a
+                className="border-l-2 border-r-2 mx-1 px-1"
+                target="_blank"
+                rel="noopener noreferrer"
+                href={data.site.siteMetadata.social.blog}
+              >
+                Blog
+              </a>
+
+              <a
+                className="border-l-2 border-r-2 mx-1 px-1"
+                target="_blank"
+                rel="noopener noreferrer"
+                href={data.site.siteMetadata.social.resume}
+              >
+                Resume
+              </a>
+
+              <Link
+                className="border-l-2 border-r-2 mx-1 px-1"
+                to="/other-projects"
+              >
+                Andere projecten
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ShowOffFooter>
+  );
+}

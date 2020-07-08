@@ -17,7 +17,7 @@ export default function FooterList({
       <h4 className="font-mono uppercase tracking-wide text-sm py-3 font-bold text-grey-600">
         {title}
       </h4>
-      <ul className="tracking-wide font-hairline list-disc">
+      <ul className="tracking-wide font-hairline text-sm list-disc">
         {items.map((item) => (
           <li key={item}>
             <span>{item}</span>
