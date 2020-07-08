@@ -3,11 +3,13 @@ import cn from "classnames";
 import { Link } from "gatsby";
 import React, { useRef, useState } from "react";
 import { useClickAway } from "react-use";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
 interface NavigationProps {
   title: string;
   menuLinks: [{ name: string; link: string; partiallyActive?: boolean }];
-  socialLinks: { name: string; url: string; icon: string }[];
+  socialLinks: { name: string; url: string; icon: IconProp }[];
 }
 
 export default function Navigation({
@@ -50,16 +52,17 @@ export default function Navigation({
                 ))}
               </div>
               <nav className="flex justify-center mt-4 md:mt-0">
-                <ul className="flex items-center">
+                <ul className="hidden sm:flex sm:items-center space-x-4">
                   {socialLinks &&
                     socialLinks.map(({ name, url, icon }) => (
-                      <li key={name} className="ml-6">
+                      <li key={name}>
                         <a
                           href={url}
                           className="text-dark hover:text-primary dark:text-white dark-hover:text-primary"
                           aria-label={`Follow on ${name}`}
                         >
                           <span className="hidden">{name}</span>
+                          <FontAwesomeIcon icon={icon} />
                         </a>
                       </li>
                     ))}

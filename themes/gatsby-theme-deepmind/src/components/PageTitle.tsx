@@ -17,7 +17,10 @@ export default function PageTitle({
         className="text-4xl tracking-widest"
         dangerouslySetInnerHTML={{ __html: title }}
       />
-      <p className="lead mt-4" dangerouslySetInnerHTML={{ __html: excerpt }} />
+      <p
+        className="text-gray-600 mt-4"
+        dangerouslySetInnerHTML={{ __html: excerpt }}
+      />
       {children}
     </div>
   );

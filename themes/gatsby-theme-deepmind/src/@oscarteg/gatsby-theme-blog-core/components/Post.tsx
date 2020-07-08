@@ -1,9 +1,10 @@
 import { Link } from "gatsby";
+import Img from "gatsby-image";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import React from "react";
 import slugify from "slugify";
-import Img from "gatsby-image";
 import PageTitle from "../../../components/PageTitle";
+import ProgressScroll from "../../../components/ProgressScroll";
 
 export default function Post({
   title,
@@ -33,11 +34,10 @@ export default function Post({
 
   return (
     <article className="post mb-12 md:mb-24">
-      <div className="text-center lg:w-4/5 mx-auto">
-        <PageTitle title={title} excerpt={excerpt}>
-          <p className="small">{date}</p>
-        </PageTitle>
-      </div>
+      <ProgressScroll />
+      <PageTitle title={title} excerpt={excerpt}>
+        <p className="small">{date}</p>
+      </PageTitle>
 
       {image?.full && (
         <figure className="mt-8 mb-10 md:mt-16 mt:mb-20">

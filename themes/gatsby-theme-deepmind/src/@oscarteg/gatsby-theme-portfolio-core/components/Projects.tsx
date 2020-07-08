@@ -1,6 +1,6 @@
 import React from "react";
-import ProjectTile from "./ProjectTile";
 import PageTitle from "../../../components/PageTitle";
+import ProjectTile from "../../../components/ProjectTile";
 
 export type ProjectsProps = {
   pageTitle: string;

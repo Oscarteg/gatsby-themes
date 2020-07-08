@@ -28,27 +28,24 @@ module.exports = {
       {
         name: `Twitter`,
         url: `https://twitter.com/oscartegiffel`,
-        icon: `twitter`,
+        icon: `fab fa-twitter`,
       },
       {
         name: `Github`,
         url: `https://github.com/oscarteg`,
-        icon: `github`,
+        icon: `fab fa-github`,
       },
       {
         name: `Youtube`,
         url: `https://youtube.com`,
-        icon: `youtube`,
+        icon: `fab fa-youtube`,
+      },
+      {
+        name: `Facebook`,
+        url: `https://facebook.com`,
+        icon: `fab fa-facebook-f`,
       },
     ],
   },
-  plugins: [
-    // This is a list of all themes that this starter is using.
-    // To disable a theme, remove it here and run `yarn remove @arshad/gatsby-theme-NAME`.
-    `@oscarteg/gatsby-theme-blog-core`,
-    `@oscarteg/gatsby-theme-page-core`,
-    `@oscarteg/gatsby-theme-portfolio-core`,
-    // `@arshad/gatsby-theme-photo-core`,
-    `@oscarteg/gatsby-theme-deepmind`,
-  ],
+  plugins: [`@oscarteg/gatsby-theme-deepmind`],
 };

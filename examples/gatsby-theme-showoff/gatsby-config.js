@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Oscar te Giffel`,
     description: `Portfolio website om mijn projecten te laten zien.`,
-    author: `@oscartegiffel`,
+    bio: `@oscartegiffel`,
     siteUrl: `https://oscartegiffel.com`,
     repoUrl: `https://github.com/oscarteg/homepage`,
     resumeUrl: `https://resume.oscartegiffel.com`,
@@ -13,20 +13,14 @@ module.exports = {
       gitlab: `oscarteg`,
       blog: `https://blog.oscartegiffel.com`,
     },
-  },
-  plugins: [
-    // This is a list of all themes that this starter is using.
-    // To disable a theme, remove it here and run `yarn remove @arshad/gatsby-theme-NAME`.
-    // `@oscarteg/gatsby-theme-blog-core`,
-    `@oscarteg/gatsby-theme-page-core`,
-    // `@oscarteg/gatsby-theme-portfolio-core`,
-    {
-      resolve: `gatsby-source-portfolio`,
-      options: {
-        basePath: "/portfolio",
+    footer: [
+      {
+        "frontend development": ["react", "vue"],
       },
-    },
-    // `@arshad/gatsby-theme-photo-core`,
-    `@oscarteg/gatsby-theme-showoff`,
-  ],
+      {
+        "backend development": ["php", "java"],
+      },
+    ],
+  },
+  plugins: [`@oscarteg/gatsby-theme-showoff`],
 };

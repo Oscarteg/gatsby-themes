@@ -38,13 +38,13 @@ export default function Layout({ children }: { children: ReactNode }) {
   } = data.allSite.nodes[0].siteMetadata;
 
   return (
-    <div className="min-h-screen">
+    <>
       <Head />
       <Seo
         title={title}
         description={description}
         bodyAttributes={{
-          class: "antialiased bg-gray-50",
+          class: "antialiased min-h-screen bg-gray-50",
         }}
       />
       <Navigation
@@ -57,6 +57,6 @@ export default function Layout({ children }: { children: ReactNode }) {
           <MDXProvider>{children}</MDXProvider>
         </main>
       </div>
-    </div>
+    </>
   );
 }

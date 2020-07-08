@@ -19,6 +19,9 @@ module.exports = {
         crossOrigin: `use-credentials`,
       },
     },
+    `@oscarteg/gatsby-theme-blog-core`,
+    `@oscarteg/gatsby-theme-page-core`,
+    `@oscarteg/gatsby-theme-portfolio-core`,
     `gatsby-plugin-offline`,
     {
       resolve: `gatsby-plugin-postcss`,
