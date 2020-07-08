@@ -13,11 +13,6 @@
     "dev": "gatsby clean && gatsby develop",
     "preview": "gatsby build && gatsby serve"
   },
-  "devDependencies": {
-    "gatsby": "^2.21.11",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
-  },
   "dependencies": {
     "@oscarteg/gatsby-theme-deepmind": "^0.0.4",
     "gatsby": "^2.21.11",
