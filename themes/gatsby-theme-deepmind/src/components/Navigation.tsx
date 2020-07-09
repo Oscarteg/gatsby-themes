@@ -54,6 +54,8 @@ export default function Navigation({
                     <li key={name}>
                       <a
                         href={url}
+                        target="_blank"
+                        rel="noreferrer noopener"
                         className="text-gray-400  hover:text-indigo-500"
                         aria-label={`Follow on ${name}`}
                       >
