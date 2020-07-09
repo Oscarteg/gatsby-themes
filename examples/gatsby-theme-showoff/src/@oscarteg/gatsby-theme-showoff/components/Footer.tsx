@@ -10,14 +10,6 @@ export default function Footer(props: FooterProps) {
       currentBuildDate {
         currentDate
       }
-      site {
-        siteMetadata {
-          repoUrl
-          social {
-            blog
-          }
-        }
-      }
     }
   `);
 
@@ -42,30 +34,6 @@ export default function Footer(props: FooterProps) {
               </Link>
               <Link className="border-l-2 border-r-2 mx-1 px-1" to="/about">
                 About
-              </Link>
-              <a
-                className="border-l-2 border-r-2 mx-1 px-1"
-                target="_blank"
-                rel="noopener noreferrer"
-                href={data.site.siteMetadata.social.blog}
-              >
-                Blog
-              </a>
-
-              <a
-                className="border-l-2 border-r-2 mx-1 px-1"
-                target="_blank"
-                rel="noopener noreferrer"
-                href={data.site.siteMetadata.social.resume}
-              >
-                Resume
-              </a>
-
-              <Link
-                className="border-l-2 border-r-2 mx-1 px-1"
-                to="/other-projects"
-              >
-                Andere projecten
               </Link>
             </div>
           </div>

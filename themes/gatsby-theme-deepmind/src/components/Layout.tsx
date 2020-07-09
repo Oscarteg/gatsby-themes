@@ -53,7 +53,7 @@ export default function Layout({ children }: { children: ReactNode }) {
         menuLinks={menuLinks}
         socialLinks={socialLinks}
       />
-      <main className="container flex-grow">
+      <main className="container flex-grow mt-4">
         <MDXProvider>{children}</MDXProvider>
       </main>
       <Footer />

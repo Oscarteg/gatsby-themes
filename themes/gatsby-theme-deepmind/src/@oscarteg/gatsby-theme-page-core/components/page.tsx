@@ -15,11 +15,9 @@ export default function Page({
 }) {
   return (
     <article>
-      <div className="lg:w-4/5 my-6 mx-auto content">
-        <PageTitle title={title} excerpt={excerpt} />
-        {body && <MDXRenderer>{body}</MDXRenderer>}
-        {children}
-      </div>
+      <PageTitle title={title} excerpt={excerpt} />
+      {body && <MDXRenderer>{body}</MDXRenderer>}
+      {children}
     </article>
   );
 }

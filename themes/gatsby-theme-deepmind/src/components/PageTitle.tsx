@@ -13,14 +13,18 @@ export default function PageTitle({
 }: PageTitleProps) {
   return (
     <div className="text-center md:w-4/5 mb-12 mx-auto">
-      <h1
-        className="text-4xl tracking-widest"
-        dangerouslySetInnerHTML={{ __html: title }}
-      />
-      <p
-        className="text-gray-600 mt-4"
-        dangerouslySetInnerHTML={{ __html: excerpt }}
-      />
+      {title && (
+        <h1
+          className="text-4xl tracking-widest"
+          dangerouslySetInnerHTML={{ __html: title }}
+        />
+      )}
+      {excerpt && (
+        <p
+          className="text-gray-600 mt-4"
+          dangerouslySetInnerHTML={{ __html: excerpt }}
+        />
+      )}
       {children}
     </div>
   );

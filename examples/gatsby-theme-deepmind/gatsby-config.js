@@ -4,6 +4,7 @@ module.exports = {
     description: ``,
     siteUrl: `http://localhost:8000`,
     // icon: `src/images/icon.png`,
+    repo: `https://example.com`,
     logo: `logo.png`,
     menuLinks: [
       {

@@ -19,7 +19,7 @@ exports.createSchemaCustomization = ({ actions }) => {
   actions.createTypes(`
     type Page implements Node @dontInfer {
       id: ID!
-      title: String!
+      title: String
       excerpt: String
       description: String
       image: File @fileByRelativePath

@@ -19,7 +19,7 @@ export default function Projects({
   projects,
 }: ProjectsProps) {
   return (
-    <div>
+    <article>
       <PageTitle title={pageTitle} excerpt={pageExcerpt} />
       <div className="grid grid-cols-2 gap-4">
         {projects.map((project) => (
@@ -28,6 +28,6 @@ export default function Projects({
           </div>
         ))}
       </div>
-    </div>
+    </article>
   );
 }

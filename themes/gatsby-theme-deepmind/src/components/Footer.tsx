@@ -1,9 +1,11 @@
 import React, { ReactNode } from "react";
+import cn from "classnames";
 
 export type FooterProps = {
   children?: ReactNode;
+  className?: string;
 };
 
-export default function Footer({ children }: FooterProps) {
-  return <footer>{children}</footer>;
+export default function Footer({ children, className }: FooterProps) {
+  return <footer className={cn(className)}>{children}</footer>;
 }

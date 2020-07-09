@@ -21,7 +21,9 @@ export default function Tag({ name, posts, ...props }: TagProps) {
         posts.length === 1 ? `` : `s`
       } tagged with "${name}"`}
 
-      {posts && posts.map((post) => <PostTile {...post} key={post.id} />)}
+      <div className="grid gap-4 grid-cols-3">
+        {posts && posts.map((post) => <PostTile {...post} key={post.id} />)}
+      </div>
     </div>
   );
 }
