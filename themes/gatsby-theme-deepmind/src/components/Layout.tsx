@@ -1,10 +1,14 @@
-import React, { ReactNode } from "react";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fab } from "@fortawesome/free-brands-svg-icons";
 import { MDXProvider } from "@mdx-js/react";
-import Navigation from "./Navigation";
-import { useStaticQuery, graphql } from "gatsby";
-import Seo from "./Seo";
-import Head from "./Head";
+import { graphql, useStaticQuery } from "gatsby";
+import React, { ReactNode } from "react";
 import Footer from "./Footer";
+import Head from "./Head";
+import Navigation from "./Navigation";
+import Seo from "./Seo";
+
+library.add(fab);
 
 export default function Layout({ children }: { children: ReactNode }) {
   const data = useStaticQuery(graphql`

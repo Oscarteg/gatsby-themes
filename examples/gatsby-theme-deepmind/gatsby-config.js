@@ -29,22 +29,22 @@ module.exports = {
       {
         name: `Twitter`,
         url: `https://twitter.com/oscartegiffel`,
-        icon: `fab fa-twitter`,
+        icon: `twitter`,
       },
       {
         name: `Github`,
         url: `https://github.com/oscarteg`,
-        icon: `fab fa-github`,
+        icon: `github`,
       },
       {
         name: `Youtube`,
         url: `https://youtube.com`,
-        icon: `fab fa-youtube`,
+        icon: `youtube`,
       },
       {
         name: `Facebook`,
         url: `https://facebook.com`,
-        icon: `fab fa-facebook-f`,
+        icon: `facebook-f`,
       },
     ],
   },
