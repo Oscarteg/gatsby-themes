@@ -1,6 +1,6 @@
 {
   "name": "@oscarteg/gatsby-theme-deepmind",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A gatsby theme for your blog",
   "main": "index.ts",
   "license": "MIT",
@@ -33,7 +33,7 @@
     "@oscarteg/gatsby-theme-blog-core": "^0.0.4",
     "@oscarteg/gatsby-theme-core": "^0.0.4",
     "@oscarteg/gatsby-theme-page-core": "^0.0.5",
-    "@oscarteg/gatsby-theme-portfolio-core": "^0.0.3",
+    "@oscarteg/gatsby-theme-portfolio-core": "^0.0.4",
     "@tailwindcss/ui": "^0.3.0",
     "classnames": "^2.2.6",
     "gatsby-image": "^2.4.12",
