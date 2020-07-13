@@ -16,9 +16,18 @@ h6 {
 }
 
 .content a {
+  @apply transition;
   background-image: linear-gradient(
     0deg,
     rgba(60, 100, 241, 0.4) 35%,
+    transparent 0
+  );
+}
+
+.content a:hover {
+  background-image: linear-gradient(
+    0deg,
+    rgba(60, 100, 241, 0.4) 100%,
     transparent 0
   );
 }

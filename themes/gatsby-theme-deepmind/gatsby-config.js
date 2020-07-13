@@ -22,7 +22,8 @@ module.exports = {
     `@oscarteg/gatsby-theme-blog-core`,
     `@oscarteg/gatsby-theme-page-core`,
     `@oscarteg/gatsby-theme-portfolio-core`,
-    `gatsby-plugin-offline`,
+    // `gatsby-plugin-offline`,
+    `gatsby-plugin-remove-serviceworker`,
     {
       resolve: `gatsby-plugin-postcss`,
       options: {
