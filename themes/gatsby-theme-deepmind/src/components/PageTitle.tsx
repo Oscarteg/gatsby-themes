@@ -15,7 +15,7 @@ export default function PageTitle({
     <div className="text-center md:w-4/5 mb-12 mx-auto">
       {title && (
         <h1
-          className="text-4xl tracking-widest"
+          className="text-4xl font-extrabold tracking-widest"
           dangerouslySetInnerHTML={{ __html: title }}
         />
       )}

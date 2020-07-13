@@ -1,5 +1,6 @@
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
+import { fas } from "@fortawesome/free-solid-svg-icons";
 import { MDXProvider } from "@mdx-js/react";
 import { graphql, useStaticQuery } from "gatsby";
 import React, { ReactNode } from "react";
@@ -8,53 +9,53 @@ import Head from "./Head";
 import Navigation from "./Navigation";
 import Seo from "./Seo";
 
-library.add(fab);
+library.add(fab, fas);
 
-export default function Layout({ children }: { children: ReactNode }) {
+interface LayoutProps {
+  title: string;
+  children: ReactNode;
+  description?: string;
+}
+
+export default function Layout({ title, description, children }: LayoutProps) {
   const data = useStaticQuery(graphql`
     {
-      allSite {
-        nodes {
-          siteMetadata {
-            title
-            description
-            socialLinks {
-              name
-              url
-              icon
-            }
-            menuLinks {
-              name
-              link
-              partiallyActive
-            }
+      site {
+        siteMetadata {
+          title
+          description
+          contactEmail
+          socialLinks {
+            name
+            url
+            icon
+          }
+          menuLinks {
+            name
+            link
+            partiallyActive
           }
         }
       }
     }
   `);
 
-  const {
-    title,
-    description,
-    // copyright,
-    socialLinks,
-    menuLinks,
-  } = data.allSite.nodes[0].siteMetadata;
+  const { socialLinks, menuLinks } = data.site.siteMetadata;
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col">
+    <div className="min-h-screen bg-gray-50 flex flex-col text-gray-800">
       <Head />
       <Seo
-        title={title}
-        description={description}
+        title={title || data.site.siteMetadata.title}
+        description={description || data.site.siteMetadata.description}
         bodyAttributes={{
-          class: "antialiased ",
+          class: "antialiased",
         }}
       />
       <Navigation
-        title={title}
+        title={data.site.siteMetadata.title}
         menuLinks={menuLinks}
+        contactEmail={data.site.siteMetadata.contactEmail}
         socialLinks={socialLinks}
       />
       <main className="container flex-grow mt-4">

@@ -36,6 +36,7 @@ export default function Code({ children, className, live, render }) {
     <Highlight {...defaultProps} code={children.trim()} language={language}>
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <pre className={className} style={{ ...style, padding: "20px" }}>
+          {/* <Copy toCopy={codeString} /> */}
           {tokens.map((line, i) => (
             <div key={i} {...getLineProps({ line, key: i })}>
               {line.map((token, key) => (

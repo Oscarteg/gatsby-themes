@@ -10,12 +10,14 @@ interface NavigationProps {
   title: string;
   menuLinks: [{ name: string; link: string; partiallyActive?: boolean }];
   socialLinks: { name: string; url: string; icon: IconProp }[];
+  contactEmail: string;
 }
 
 export default function Navigation({
   title,
   menuLinks,
   socialLinks,
+  contactEmail,
 }: NavigationProps) {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const mobileMenu = useRef(null);
@@ -28,7 +30,7 @@ export default function Navigation({
     <nav className="bg-white border-b border-gray-200">
       <div className="container">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between h-16">
+          <div className="flex items-center h-16">
             <div className="flex-shrink-0 flex items-center">
               <Link to={"/"} className="text-2xl font-mono hover:text-blue-500">
                 {title}
@@ -75,6 +77,28 @@ export default function Navigation({
                 </li>
               </ul>
             </nav>
+            {contactEmail && (
+              <a
+                href={`mailto:${contactEmail}`}
+                className="h-8 group inline-flex items-center px-4 py-2 border border-gray-400 text-sm leading-5 font-medium rounded-md text-gray-500 bg-white hover:text-gray-900 focus:outline-none focus:text-gray-900 focus:border-gray-500 hover:border-gray-500"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  className="w-4 mr-1 icon-mail"
+                >
+                  <path
+                    className="primary"
+                    d="M22 8.62V18a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8.62l9.55 4.77a1 1 0 0 0 .9 0L22 8.62z"
+                  />
+                  <path
+                    className="secondary"
+                    d="M12 11.38l-10-5V6c0-1.1.9-2 2-2h16a2 2 0 0 1 2 2v.38l-10 5z"
+                  />
+                </svg>
+                Contact me
+              </a>
+            )}
           </div>
 
           <div className="-mr-2 flex items-center sm:hidden">

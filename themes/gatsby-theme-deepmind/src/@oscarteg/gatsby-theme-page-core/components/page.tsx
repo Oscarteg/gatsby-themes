@@ -14,10 +14,12 @@ export default function Page({
   excerpt: string;
 }) {
   return (
-    <article>
+    <article className="post mb-12 md:mb-24">
       <PageTitle title={title} excerpt={excerpt} />
-      {body && <MDXRenderer>{body}</MDXRenderer>}
-      {children}
+      <div className="lg:w-4/5 my-6 mx-auto content">
+        {body && <MDXRenderer>{body}</MDXRenderer>}
+        {children}
+      </div>
     </article>
   );
 }
