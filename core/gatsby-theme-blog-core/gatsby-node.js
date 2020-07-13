@@ -74,7 +74,7 @@ exports.onCreateNode = async (
   // ! Dont create posts when production and is draft.
   if (
     node.frontmatter.draft === true &&
-    process.node.NODE_ENV === "production"
+    process.env.NODE_ENV === "production"
   ) {
     return;
   }
