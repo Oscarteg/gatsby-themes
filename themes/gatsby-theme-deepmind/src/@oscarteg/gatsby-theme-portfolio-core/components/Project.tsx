@@ -13,7 +13,7 @@ export default function Project({ title, excerpt, url, body }: ProjectProps) {
   return (
     <article className="project prose prose-sm lg:prose-lg mx-auto mb-12">
       <PageTitle title={title} excerpt={excerpt}>
-        <div className="text-center md:w-4/5 mb-12 mx-auto mt-3">
+        <div>
           <a
             href={url}
             target="_blank"

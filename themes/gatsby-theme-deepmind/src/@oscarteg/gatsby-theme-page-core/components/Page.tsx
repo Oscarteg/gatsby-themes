@@ -15,11 +15,9 @@ export default function Page({
 }) {
   return (
     <article className="page prose prose-sm sm:prose lg:prose-lg xl:prose-2xl mx-auto mb-12 max-w-none">
-      <PageTitle title={title} excerpt={excerpt} />
-      <div className="">
-        {body && <MDXRenderer>{body}</MDXRenderer>}
-        {children}
-      </div>
+      {title || excerpt ? <PageTitle title={title} excerpt={excerpt} /> : null}
+      {body && <MDXRenderer>{body}</MDXRenderer>}
+      {children}
     </article>
   );
 }

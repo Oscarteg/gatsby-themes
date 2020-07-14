@@ -36,17 +36,12 @@ export default function Post({
     <article className="post prose prose-sm lg:prose-lg mx-auto mb-12">
       <ProgressScroll />
       <PageTitle title={title} excerpt={excerpt}>
-        <p className="small">{date}</p>
+        <small>{date}</small>
       </PageTitle>
 
       {image?.full && (
-        <figure className="">
-          <Img
-            fluid={image.full.fluid}
-            className="rounded-sm"
-            title={title}
-            alt={caption || title}
-          />
+        <figure>
+          <Img fluid={image.full.fluid} title={title} alt={caption || title} />
           {caption && (
             <figcaption dangerouslySetInnerHTML={{ __html: caption }} />
           )}
