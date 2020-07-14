@@ -4,9 +4,9 @@ import Code from "./src/components/Code";
 import Quote from "./src/components/Quote";
 
 const components = {
+  pre: (props) => <div {...props} />,
   code: Code,
   blockquote: Quote,
-  wrapper: ({ children }) => <>{children}</>,
 };
 
 export const wrapRootElement = ({ element }) => (

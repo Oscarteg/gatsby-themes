@@ -12,7 +12,11 @@ export default function Posts({
 }) {
   return (
     <>
-      <PageTitle title={pageTitle} excerpt={pageExcerpt} />
+      <PageTitle
+        title={pageTitle}
+        excerpt={pageExcerpt}
+        titleClass="text-4xl font-extrabold tracking-widest"
+      />
       <div className="flex flex-col divide-y divide-gray-200">
         {posts &&
           posts.map((post) => (

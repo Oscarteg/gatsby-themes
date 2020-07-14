@@ -14,9 +14,9 @@ export default function Page({
   excerpt: string;
 }) {
   return (
-    <article className="post mb-12 md:mb-24">
+    <article className="page prose prose-sm sm:prose lg:prose-lg xl:prose-2xl mx-auto mb-12 max-w-none">
       <PageTitle title={title} excerpt={excerpt} />
-      <div className="lg:w-4/5 my-6 mx-auto content">
+      <div className="">
         {body && <MDXRenderer>{body}</MDXRenderer>}
         {children}
       </div>

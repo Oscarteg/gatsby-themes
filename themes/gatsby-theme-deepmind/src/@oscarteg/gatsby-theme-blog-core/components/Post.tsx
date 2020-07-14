@@ -33,14 +33,14 @@ export default function Post({
     : null;
 
   return (
-    <article className="post mb-12 md:mb-24">
+    <article className="post prose prose-sm lg:prose-lg mx-auto mb-12">
       <ProgressScroll />
       <PageTitle title={title} excerpt={excerpt}>
         <p className="small">{date}</p>
       </PageTitle>
 
       {image?.full && (
-        <figure className="mt-8 mb-10 md:mt-16 mt:mb-20">
+        <figure className="">
           <Img
             fluid={image.full.fluid}
             className="rounded-sm"
@@ -53,9 +53,7 @@ export default function Post({
         </figure>
       )}
 
-      <div className="lg:w-4/5 my-6 mx-auto content">
-        {body && <MDXRenderer>{body}</MDXRenderer>}
-      </div>
+      {body && <MDXRenderer>{body}</MDXRenderer>}
 
       <div className="lg:w-4/5 mx-auto">
         {tags && (

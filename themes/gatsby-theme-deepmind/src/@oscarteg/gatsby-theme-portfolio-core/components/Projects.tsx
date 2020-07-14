@@ -24,7 +24,11 @@ export default function Projects({
 }: ProjectsProps) {
   return (
     <article>
-      <PageTitle title={pageTitle} excerpt={pageExcerpt} />
+      <PageTitle
+        title={pageTitle}
+        excerpt={pageExcerpt}
+        titleClass="text-4xl font-extrabold tracking-widest"
+      />
       <div className="projects flex flex-col divide-y divide-gray-20">
         {projects.map((project) => (
           <ProjectTile className="py-4" {...project} key={project.id} />

@@ -8,34 +8,34 @@ export default function Code({ children, className, live, render }) {
 
   if (live) {
     return (
-      <div style={{ marginTop: "40px", backgroundColor: "black" }}>
+      <pre>
         <LiveProvider
           code={children.trim()}
-          transformCode={(code) => "/** @jsx mdx */" + code}
+          transformCode={(code) => "/** @jsx mdx */\n" + code}
           scope={{ mdx }}
         >
           <LivePreview />
           <LiveEditor />
           <LiveError />
         </LiveProvider>
-      </div>
+      </pre>
     );
   }
 
   if (render) {
     return (
-      <div style={{ marginTop: "40px" }}>
+      <pre>
         <LiveProvider code={children}>
           <LivePreview />
         </LiveProvider>
-      </div>
+      </pre>
     );
   }
 
   return (
     <Highlight {...defaultProps} code={children.trim()} language={language}>
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
-        <pre className={className} style={{ ...style, padding: "20px" }}>
+        <pre className={className} style={{ ...style }}>
           {/* <Copy toCopy={codeString} /> */}
           {tokens.map((line, i) => (
             <div key={i} {...getLineProps({ line, key: i })}>
