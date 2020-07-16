@@ -29,7 +29,10 @@ export default function Projects({
         excerpt={pageExcerpt}
         titleClass="text-4xl font-extrabold tracking-widest"
       />
-      <div className="projects flex flex-col divide-y divide-gray-20">
+      <div
+        className="projects grid grid-cols-1 gap-4 divide-y divide-gray-20"
+        style={{ gridAutoRows: "1fr" }}
+      >
         {projects.map((project) => (
           <ProjectTile className="py-4" {...project} key={project.id} />
         ))}

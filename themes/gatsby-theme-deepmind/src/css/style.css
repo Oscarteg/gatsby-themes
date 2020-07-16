@@ -15,7 +15,7 @@ code {
   @apply overflow-scroll;
 }
 
-.projects:nth-child(+ even) {
+.projects a:nth-child(even) article {
   @apply flex-row-reverse;
 }
 

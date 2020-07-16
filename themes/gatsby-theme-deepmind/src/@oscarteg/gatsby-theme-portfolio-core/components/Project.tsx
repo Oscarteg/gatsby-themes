@@ -5,7 +5,7 @@ import PageTitle from "../../../components/PageTitle";
 export type ProjectProps = {
   title: string;
   excerpt: string;
-  url: string;
+  url?: string;
   body: string;
 };
 
@@ -13,7 +13,7 @@ export default function Project({ title, excerpt, url, body }: ProjectProps) {
   return (
     <article className="project prose prose-sm lg:prose-lg mx-auto mb-12">
       <PageTitle title={title} excerpt={excerpt}>
-        <div>
+        {url && (
           <a
             href={url}
             target="_blank"
@@ -36,7 +36,7 @@ export default function Project({ title, excerpt, url, body }: ProjectProps) {
               />
             </svg>
           </a>
-        </div>
+        )}
       </PageTitle>
 
       {body && <MDXRenderer>{body}</MDXRenderer>}

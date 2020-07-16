@@ -9,7 +9,7 @@ export type ProjectTileProps = {
   title: string;
   slug: string;
   className: string;
-  image: {
+  image?: {
     thumbnail: GatsbyImageProps;
   };
 };
@@ -20,7 +20,6 @@ export default function ProjectTile({
   slug,
   className,
   image,
-  ...props
 }: ProjectTileProps) {
   return (
     <Link to={slug} title={`Go to the "${title}" post`}>
@@ -30,10 +29,14 @@ export default function ProjectTile({
           "group transition rounded px-3 flex hover:text-indigo-500"
         )}
       >
-        <Img
-          className="w-1/4 rounded shadow-2xl hover:translate-y-8"
-          fluid={image.thumbnail.fluid}
-        />
+        {image ? (
+          <Img
+            className="w-1/4 rounded shadow-2xl hover:translate-y-8"
+            fluid={image.thumbnail.fluid}
+          />
+        ) : (
+          <div className="w-1/4"></div>
+        )}
 
         <div className="w-3/4 ml-8">
           <h2

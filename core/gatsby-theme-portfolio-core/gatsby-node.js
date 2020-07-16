@@ -23,7 +23,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       excerpt(pruneLength: Int = 150): String
       slug: String!
       body: String!
-      url: String!
+      url: String
       image: File @fileByRelativePath
     }
   `);
