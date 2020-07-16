@@ -27,6 +27,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       image: File @fileByRelativePath
       caption: String
       tags: [String]
+      tableOfContents: JSON
     }
   `);
 };
@@ -43,7 +44,7 @@ const mdxResolverPassthrough = (fieldName) => async (
     id: source.parent,
   });
   const resolver = type.getFields()[fieldName].resolve;
-  return await resolver(mdxNode, args, context, {
+  return resolver(mdxNode, args, context, {
     fieldName,
   });
 };
@@ -53,6 +54,9 @@ exports.createResolvers = ({ createResolvers }) => {
     Post: {
       body: {
         resolve: mdxResolverPassthrough(`body`),
+      },
+      tableOfContents: {
+        resolve: mdxResolverPassthrough(`tableOfContents`),
       },
     },
   });

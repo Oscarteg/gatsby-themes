@@ -10,6 +10,7 @@ export const fragment = graphql`
     slug
     tags
     caption
+    tableOfContents
     image {
       full: childImageSharp {
         fluid(maxWidth: 960, maxHeight: 540, cropFocus: CENTER, quality: 100) {

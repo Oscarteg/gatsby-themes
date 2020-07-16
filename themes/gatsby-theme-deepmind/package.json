@@ -41,6 +41,7 @@
     "gatsby-plugin-postcss": "^2.3.6",
     "gatsby-plugin-react-helmet": "^3.3.6",
     "gatsby-plugin-remove-serviceworker": "^1.0.0",
+    "gatsby-remark-autolink-headers": "^2.3.11",
     "gatsby-transformer-sharp": "^2.5.7",
     "prism-react-renderer": "^1.1.1",
     "prismjs": "^1.20.0",
