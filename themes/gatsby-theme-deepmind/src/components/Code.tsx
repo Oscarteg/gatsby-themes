@@ -3,7 +3,7 @@ import Highlight, { defaultProps } from "prism-react-renderer";
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live";
 import { mdx } from "@mdx-js/react";
 
-export default function Code({ children, className, live, render }) {
+export default function Code({ children, className = "", live, render }) {
   const language = className.replace(/language-/, "");
 
   if (live) {
