@@ -2,7 +2,7 @@
   "name": "@oscarteg/gatsby-theme-blog-core",
   "description": "Adds a post type for Gatsby sites",
   "author": "Oscar te Giffel <oscar@tegiffel.com>",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "main": "index.ts",
   "license": "MIT",
   "publishConfig": {
