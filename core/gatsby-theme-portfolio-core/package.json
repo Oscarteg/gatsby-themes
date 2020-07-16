@@ -2,7 +2,7 @@
   "name": "@oscarteg/gatsby-theme-portfolio-core",
   "description": "Portfolio functionality for Gatsby sites",
   "author": "Oscar te Giffel <oscar@tegiffel.com>",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "index.ts",
   "license": "MIT",
   "publishConfig": {

@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.16](https://github.com/Oscarteg/gatsby-themes/compare/@oscarteg/gatsby-example-deepmind@0.0.15...@oscarteg/gatsby-example-deepmind@0.0.16) (2020-07-16)
+
+**Note:** Version bump only for package @oscarteg/gatsby-example-deepmind
+
 ## [0.0.15](https://github.com/Oscarteg/gatsby-themes/compare/@oscarteg/gatsby-example-deepmind@0.0.14...@oscarteg/gatsby-example-deepmind@0.0.15) (2020-07-16)
 
 **Note:** Version bump only for package @oscarteg/gatsby-example-deepmind
