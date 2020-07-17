@@ -35,7 +35,7 @@ export default function Post({
         </figure>
       )}
 
-      {tableOfContents && <TableOfContents items={tableOfContents?.items} />}
+      {tableOfContents.items && <TableOfContents items={tableOfContents?.items} />}
       {body && <MDXRenderer>{body}</MDXRenderer>}
       <div className="lg:w-4/5 mx-auto">
         {tags && (
