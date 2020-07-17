@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.8](https://github.com/gatsbyjs/gatsby-starter-default/compare/@oscarteg/gatsby-example-showoff@0.0.7...@oscarteg/gatsby-example-showoff@0.0.8) (2020-07-17)
+
+**Note:** Version bump only for package @oscarteg/gatsby-example-showoff
+
 ## [0.0.7](https://github.com/gatsbyjs/gatsby-starter-default/compare/@oscarteg/gatsby-example-showoff@0.0.6...@oscarteg/gatsby-example-showoff@0.0.7) (2020-07-16)
 
 **Note:** Version bump only for package @oscarteg/gatsby-example-showoff
