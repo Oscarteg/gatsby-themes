@@ -10,7 +10,7 @@ export default function TableOfContents({ items }: TableOfContentsProps) {
     <ul>
       {items.map((item) => {
         return (
-          <li>
+          <li key={item.title}>
             <a href={item.url}>{item.title}</a>
             {item.items && <TableOfContents items={item.items} />}
           </li>
