@@ -47,6 +47,10 @@ export default ({
       }}
       bodyAttributes={bodyAttributes}
     >
+      <link
+        href="https://unpkg.com/prism-theme-night-owl@1.4.0/build/style.css"
+        rel="stylesheet"
+      />
       <link rel="canonical" href={absoluteUrl(url) || site.siteUrl} />
       <meta name="description" content={description || site.description} />
       <meta name="og:title" content={title || site.title} />

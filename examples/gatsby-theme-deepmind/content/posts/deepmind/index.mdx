@@ -19,6 +19,41 @@ Praesent eu sollicitudin augue. Ut pulvinar est nec nibh sodales consectetur. In
 
 Sed elementum, leo ac faucibus porta, eros augue fringilla sem, ut tincidunt sapien nisi vestibulum mauris. Nunc at dictum nibh. Etiam vel tempus quam, eget finibus ipsum. Morbi vel elit sit amet nisl sodales malesuada. Proin viverra gravida ligula, et eleifend nibh dignissim et. Quisque libero lectus, scelerisque et ornare ut, euismod vel tellus. Praesent nec ante et arcu tristique pretium. Sed gravida, tortor ac vulputate hendrerit, metus ante sagittis sem, non pretium ligula arcu eget mauris. Ut a pharetra lacus, et bibendum dui. Suspendisse rhoncus, dui non tincidunt aliquet, est ante luctus massa, non sagittis felis diam a nunc. Nulla pellentesque accumsan est, at pulvinar orci pulvinar id. Morbi vitae fringilla eros, vitae pretium erat. Proin nibh mauris, pellentesque non risus a, ullamcorper molestie massa. Duis vitae ornare ipsum, sit amet ullamcorper eros. Pellentesque rutrum ultricies dolor ut lobortis. Donec quis ultrices nisl.
 
+```go
+// This `person` struct type has `name` and `age` fields.
+type person struct {
+  name string
+  age  int
+}
+
+func main() {
+  // This syntax creates a new struct.
+  fmt.Println(person{"Bob", 20})
+
+  // You can name the fields when initializing a struct.
+  fmt.Println(person{name: "Alice", age: 30})
+
+  // Omitted fields will be zero-valued.
+  fmt.Println(person{name: "Fred"})
+
+  // An `&` prefix yields a pointer to the struct.
+  fmt.Println(&person{name: "Ann", age: 40})
+
+  // Access struct fields with a dot.
+  s := person{name: "Sean", age: 50}
+  fmt.Println(s.name)
+
+  // You can also use dots with struct pointers - the
+  // pointers are automatically dereferenced.
+  sp := &s
+  fmt.Println(sp.age)
+
+  // Structs are mutable.
+  sp.age: 51
+  fmt.Println(sp.age)
+}
+```
+
 #### Risus
 
 ```jsx

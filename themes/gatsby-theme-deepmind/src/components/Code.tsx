@@ -1,5 +1,6 @@
 import React from "react";
 import Highlight, { defaultProps } from "prism-react-renderer";
+import dracula from "prism-react-renderer/themes/dracula";
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live";
 import { mdx } from "@mdx-js/react";
 
@@ -33,7 +34,12 @@ export default function Code({ children, className = "", live, render }) {
   }
 
   return (
-    <Highlight {...defaultProps} code={children.trim()} language={language}>
+    <Highlight
+      {...defaultProps}
+      theme={undefined}
+      code={children.trim()}
+      language={language}
+    >
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <pre className={className} style={{ ...style }}>
           {/* <Copy toCopy={codeString} /> */}

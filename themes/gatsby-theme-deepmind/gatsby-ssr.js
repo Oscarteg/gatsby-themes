@@ -1,4 +1,4 @@
-import "prismjs/themes/prism-okaidia.css";
+import "prismjs/themes/prism-tomorrow.css";
 
 import CustomLayout from "./wrapPageElement";
 
