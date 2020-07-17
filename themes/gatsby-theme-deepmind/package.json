@@ -1,6 +1,6 @@
 {
   "name": "@oscarteg/gatsby-theme-deepmind",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "description": "A gatsby theme for your blog",
   "main": "index.ts",
   "license": "MIT",
