@@ -18,9 +18,7 @@ export default function Post({
   caption,
   date,
   body,
-  headings,
   tableOfContents,
-  ...props
 }: PostProps) {
   return (
     <article className="post prose prose-sm lg:prose-lg mx-auto mb-12">
@@ -37,7 +35,7 @@ export default function Post({
         </figure>
       )}
 
-      <TableOfContents items={tableOfContents?.items} />
+      {tableOfContents && <TableOfContents items={tableOfContents?.items} />}
       {body && <MDXRenderer>{body}</MDXRenderer>}
       <div className="lg:w-4/5 mx-auto">
         {tags && (

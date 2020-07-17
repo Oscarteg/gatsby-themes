@@ -20,7 +20,7 @@ export default function Footer(props: FooterProps) {
   `);
 
   return (
-    <DeepMindFooter>
+    <DeepMindFooter className="mt-12">
       <div className="container border-t border-gray-200 pt-6 mt-6">
         <div className="grid grid-cols-3 gap-4">
           <div className="flex flex-col items-center">
