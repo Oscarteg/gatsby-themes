@@ -2,7 +2,7 @@
   "name": "@oscarteg/gatsby-theme-core",
   "description": "Helpers for @oscarteg/gatsby-themes packages",
   "author": "oscarteg <oscarteg@chummun.com>",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "main": "index.tsx",
   "license": "MIT",
   "publishConfig": {
