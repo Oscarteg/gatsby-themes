@@ -8,7 +8,7 @@ export default ({ data, pageContext }) => (
 
 export const query = graphql`
   query {
-    allProject(sort: { fields: title, order: ASC }) {
+    allProject(sort: { fields: title, order: DESC }) {
       projects: nodes {
         ...ProjectFragment
       }

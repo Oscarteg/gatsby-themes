@@ -5,6 +5,7 @@ import PageTitle from "../../../components/PageTitle";
 import ProgressScroll from "../../../components/ProgressScroll";
 import Tags from "./Tags";
 import TableOfContents from "../../../components/TableOfContents";
+import { format, parseISO } from "date-fns";
 
 interface PostProps {
   title: string;
@@ -24,7 +25,7 @@ export default function Post({
     <article className="post prose prose-sm lg:prose-lg mx-auto mb-12">
       <ProgressScroll />
       <PageTitle title={title} excerpt={excerpt}>
-        <small>{date}</small>
+        <small>{format(parseISO(date), "MMMM dd, yyyy")}</small>
       </PageTitle>
       {image?.full && (
         <figure>
@@ -35,7 +36,9 @@ export default function Post({
         </figure>
       )}
 
-      {tableOfContents.items && <TableOfContents items={tableOfContents?.items} />}
+      {tableOfContents.items && (
+        <TableOfContents items={tableOfContents?.items} />
+      )}
       {body && <MDXRenderer>{body}</MDXRenderer>}
       <div className="lg:w-4/5 mx-auto">
         {tags && (

@@ -4,7 +4,7 @@ export const fragment = graphql`
   fragment PostFragment on Post {
     id
     title
-    date(formatString: "MMMM DD, YYYY")
+    date
     excerpt
     body
     slug

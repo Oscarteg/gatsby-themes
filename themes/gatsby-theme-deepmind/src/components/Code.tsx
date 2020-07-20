@@ -1,6 +1,5 @@
 import React from "react";
 import Highlight, { defaultProps } from "prism-react-renderer";
-import dracula from "prism-react-renderer/themes/dracula";
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live";
 import { mdx } from "@mdx-js/react";
 
