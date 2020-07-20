@@ -2,6 +2,10 @@ import React from "react";
 import { Link } from "gatsby";
 
 export default ({ previousPagePath, nextPagePath }) => {
+  if (!previousPagePath && !nextPagePath) {
+    return null;
+  }
+
   return (
     <nav className="border-t border-gray-200 px-4 flex items-center justify-between sm:px-0">
       <div className="w-0 flex-1 flex">

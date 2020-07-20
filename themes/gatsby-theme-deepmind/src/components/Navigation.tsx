@@ -1,7 +1,7 @@
 import Transition from "@oscarteg/gatsby-theme-core/components/Transition";
 import cn from "classnames";
 import { Link } from "gatsby";
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, ReactNode } from "react";
 import { useClickAway } from "react-use";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
@@ -9,7 +9,7 @@ import { IconProp } from "@fortawesome/fontawesome-svg-core";
 interface NavigationProps {
   title: string;
   menuLinks: [{ name: string; link: string; partiallyActive?: boolean }];
-  socialLinks: { name: string; url: string; icon: IconProp }[];
+  socialLinks: { name: string; url: string; icon: IconProp | ReactNode }[];
   contactEmail: string;
 }
 
@@ -62,7 +62,11 @@ export default function Navigation({
                         aria-label={`Follow on ${name}`}
                       >
                         <span className="hidden">{name}</span>
-                        <FontAwesomeIcon icon={["fab", icon]} />
+                        {React.isValidElement(icon) ? (
+                          icon
+                        ) : (
+                          <FontAwesomeIcon icon={["fab", icon]} />
+                        )}
                       </a>
                     </li>
                   ))}
