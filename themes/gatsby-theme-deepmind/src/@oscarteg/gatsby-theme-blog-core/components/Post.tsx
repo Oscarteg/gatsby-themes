@@ -40,13 +40,11 @@ export default function Post({
         <TableOfContents items={tableOfContents?.items} />
       )}
       {body && <MDXRenderer>{body}</MDXRenderer>}
-      <div className="lg:w-4/5 mx-auto">
-        {tags && (
-          <div className="text-sm mt-8 pt-8 md:mt-16 md:pt-16 border-t border-offwhite dark:border-text text-text dark:text-white">
-            Tagged with <Tags tags={tags} />
-          </div>
-        )}
-      </div>
+      {tags && (
+        <div className="text-sm mt-8 pt-8 md:mt-16 md:pt-16 border-t border-offwhite dark:border-text text-text dark:text-white">
+          Tagged with <Tags tags={tags} />
+        </div>
+      )}
     </article>
   );
 }

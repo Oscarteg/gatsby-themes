@@ -43,9 +43,6 @@ export default function ProjectTile({
             dangerouslySetInnerHTML={{ __html: title }}
             className="text-2xl font-bold"
           />
-          {/* <small className=" block text-gray-400">
-          Posted on <span className="font-bold">{date}</span>
-        </small> */}
 
           {excerpt && (
             <p

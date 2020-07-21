@@ -1,6 +1,7 @@
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { fas } from "@fortawesome/free-solid-svg-icons";
+import { far } from "@fortawesome/free-regular-svg-icons";
 import { MDXProvider } from "@mdx-js/react";
 import { graphql, useStaticQuery } from "gatsby";
 import React, { ReactNode } from "react";
@@ -9,7 +10,7 @@ import Head from "./Head";
 import Navigation from "./Navigation";
 import Seo from "./Seo";
 
-library.add(fab, fas);
+library.add(far, fab, fas);
 
 interface LayoutProps {
   title: string;

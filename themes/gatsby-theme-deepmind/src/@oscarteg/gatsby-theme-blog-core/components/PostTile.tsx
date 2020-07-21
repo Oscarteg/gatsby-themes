@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "gatsby";
 import React from "react";
 import cn from "classnames";
+import { format, parseISO } from "date-fns";
 
 export default function PostTile({
   className,
@@ -24,7 +25,10 @@ export default function PostTile({
           className="text-2xl font-bold"
         />
         <small className=" block text-gray-400">
-          Posted on <span className="font-bold">{date}</span>
+          Posted on{" "}
+          <span className="font-bold">
+            {format(parseISO(date), "MMMM dd, yyyy")}
+          </span>
         </small>
 
         {excerpt && (
