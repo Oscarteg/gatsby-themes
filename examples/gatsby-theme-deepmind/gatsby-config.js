@@ -30,22 +30,27 @@ module.exports = {
       {
         name: `Twitter`,
         url: `https://twitter.com/oscartegiffel`,
-        icon: `twitter`,
+        icon: [`fab`, `twitter`],
       },
       {
         name: `Github`,
         url: `https://github.com/oscarteg`,
-        icon: `github`,
+        icon: [`fab`, `github`],
       },
       {
         name: `Youtube`,
         url: `https://youtube.com`,
-        icon: `youtube`,
+        icon: [`fab`, `youtube`],
       },
       {
         name: `Facebook`,
         url: `https://facebook.com`,
-        icon: `facebook-f`,
+        icon: [`fab`, `facebook-f`],
+      },
+      {
+        name: `Facebook`,
+        url: `https://facebook.com`,
+        icon: [`far`, `file-code`],
       },
     ],
   },

@@ -26,19 +26,19 @@ export default function ProjectTile({
       <article
         className={cn(
           className,
-          "group transition rounded px-3 flex hover:text-indigo-500"
+          "group transition rounded px-3 sm:flex hover:text-indigo-500"
         )}
       >
         {image ? (
           <Img
-            className="w-1/4 rounded shadow-2xl hover:translate-y-8"
+            className="w-full sm:w-1/4 rounded shadow-2xl hover:translate-y-8"
             fluid={image.thumbnail.fluid}
           />
         ) : (
-          <div className="w-1/4"></div>
+          <div className="w-full sm:w-1/4"></div>
         )}
 
-        <div className="w-3/4 ml-8">
+        <div className="sm:w-3/4 sm:ml-8 mt-5">
           <h2
             dangerouslySetInnerHTML={{ __html: title }}
             className="text-2xl font-bold"

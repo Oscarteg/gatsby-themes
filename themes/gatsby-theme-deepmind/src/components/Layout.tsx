@@ -59,7 +59,7 @@ export default function Layout({ title, description, children }: LayoutProps) {
         contactEmail={data.site.siteMetadata.contactEmail}
         socialLinks={socialLinks}
       />
-      <main className="container flex-grow mt-12">
+      <main className="container flex-grow mt-12 px-8 sm:p-0">
         <MDXProvider>{children}</MDXProvider>
       </main>
       <Footer />

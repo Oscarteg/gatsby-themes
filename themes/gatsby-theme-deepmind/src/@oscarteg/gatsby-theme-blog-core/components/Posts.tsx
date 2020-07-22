@@ -27,8 +27,8 @@ export default function Posts({
       {Object.entries(postGroups).map((postsGroup) => {
         return (
           <>
-            <div className="grid grid-cols-6 gap-4 border-t">
-              <div className="py-6 px-3">
+            <div className="sm:grid grid-cols-6 gap-4 border-t">
+              <div className="text-center sm:text-left py-6 px-3">
                 <p className="sticky top-0">{postsGroup[0]}</p>
               </div>
               <div className="col-span-5 space-y-10">
