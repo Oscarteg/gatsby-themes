@@ -1,7 +1,13 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
-  purge: [],
+  purge: {
+    mode: "all",
+    content: [
+      "./src/**/*.tsx",
+      "./node_modules/@oscarteg/gatsby-theme-deepmind/src/**/*.tsx",
+    ],
+  },
   theme: {
     container: {
       center: true,
