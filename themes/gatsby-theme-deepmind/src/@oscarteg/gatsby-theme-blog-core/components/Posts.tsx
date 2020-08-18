@@ -15,14 +15,9 @@ export default function Posts({
   const postGroups = groupBy(posts, (post) => {
     return format(parseISO(post.date), "MMMM, yyyy");
   });
-  console.log(Object.entries(postGroups));
   return (
     <>
-      <PageTitle
-        title={pageTitle}
-        excerpt={pageExcerpt}
-        titleClass="text-4xl font-extrabold tracking-widest"
-      />
+      <PageTitle title={pageTitle} excerpt={pageExcerpt} />
 
       {Object.entries(postGroups).map((postsGroup) => {
         return (

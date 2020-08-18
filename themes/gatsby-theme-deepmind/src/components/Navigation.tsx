@@ -27,7 +27,7 @@ export default function Navigation({
   });
 
   return (
-    <nav className="bg-white border-b border-gray-200">
+    <nav className="bg-primary border-b border-gray-200">
       <div className="container px-4 sm:px-6 lg:px-8 flex justify-between sm:block">
         <div className="flex items-center h-16">
           <div className="flex-shrink-0 flex items-center">
@@ -35,7 +35,7 @@ export default function Navigation({
               {title}
             </Link>
           </div>
-          <div className="hidden sm:-my-px sm:ml-6 sm:flex uppercase tracking-wide text-xs space-x-6 font-medium flex-1">
+          <div className="hidden sm:-my-px sm:ml-6 sm:flex uppercase tracking-wide text-xs space-x-6 font-medium flex-1 h-16">
             {menuLinks.map((menuLink) => (
               <Link
                 key={menuLink.link}

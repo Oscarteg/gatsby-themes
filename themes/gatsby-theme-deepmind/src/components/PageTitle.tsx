@@ -18,7 +18,7 @@ export default function PageTitle({
     <div className="text-center mb-12">
       {title && (
         <h1
-          className={classNames(titleClass)}
+          className={classNames(titleClass, "capitalize")}
           dangerouslySetInnerHTML={{ __html: title }}
         />
       )}

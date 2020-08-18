@@ -8,7 +8,7 @@ export type FooterProps = {
 
 export default function Footer({ children, className }: FooterProps) {
   return (
-    <footer className={cn(className, "bg-gray-800 text-white")}>
+    <footer className={cn(className, "bg-primary text-white")}>
       {children}
     </footer>
   );

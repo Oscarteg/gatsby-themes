@@ -1,7 +1,7 @@
 import React from "react";
-import PostTile from "./PostTile";
-import Pager from "./Pager";
 import PageTitle from "../../../components/PageTitle";
+import Pager from "./Pager";
+import PostTile from "./PostTile";
 
 export type TagProps = {
   name: string;
@@ -23,7 +23,6 @@ export default function Tag({
         excerpt={`${posts.length} post${
           posts.length === 1 ? `` : `s`
         } tagged with "${name}"`}
-        titleClass="text-4xl font-extrabold tracking-widest"
       />
       <div className="flex flex-col divide-y divide-gray-200">
         {posts &&

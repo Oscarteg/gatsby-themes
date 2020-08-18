@@ -12,6 +12,14 @@ module.exports = {
     container: {
       center: true,
     },
+    colors: {
+      danger: "var(--imperial-red)",
+      neutral: "var(--honeydew)",
+      primary: "var(--orange-web)",
+      accent: "var(--celadon-blue)",
+      dark: "var(--prussian-blue)",
+      ...defaultTheme.colors,
+    },
     extend: {
       fontFamily: {
         sans: ["Inter var", ...defaultTheme.fontFamily.sans],
