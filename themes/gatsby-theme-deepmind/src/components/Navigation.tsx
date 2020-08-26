@@ -27,11 +27,11 @@ export default function Navigation({
   });
 
   return (
-    <nav className="bg-primary border-b border-gray-200">
+    <nav className="bg-white border-b border-gray-200">
       <div className="container px-4 sm:px-6 lg:px-8 flex justify-between sm:block">
         <div className="flex items-center h-16">
           <div className="flex-shrink-0 flex items-center">
-            <Link to={"/"} className="text-2xl font-mono hover:text-blue-500">
+            <Link to="/" className="text-2xl font-mono hover:text-blue-500">
               {title}
             </Link>
           </div>
@@ -141,7 +141,7 @@ export default function Navigation({
 
       <Transition
         show={isOpen}
-        appear={true}
+        appear
         enter="transition ease-out duration-100"
         enterFrom="transform opacity-0 scale-95"
         enterTo="transform opacity-100 scale-100"

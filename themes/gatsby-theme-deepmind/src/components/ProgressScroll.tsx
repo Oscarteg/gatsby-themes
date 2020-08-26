@@ -45,10 +45,7 @@ export default function ProgressScroll(props: ProgressScrollProps) {
 
   return (
     <div className="fixed w-full h-8">
-      <div
-        className="bg-blue-300"
-        style={{ width: `${scrollPosition}%` }}
-      ></div>
+      <div className="bg-blue-300" style={{ width: `${scrollPosition}%` }} />
     </div>
   );
 }

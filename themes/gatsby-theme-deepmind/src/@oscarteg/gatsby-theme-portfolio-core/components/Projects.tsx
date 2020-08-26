@@ -1,7 +1,7 @@
 import React from "react";
+import { GatsbyImageProps } from "gatsby-image";
 import PageTitle from "../../../components/PageTitle";
 import ProjectTile from "../../../components/ProjectTile";
-import { GatsbyImageProps } from "gatsby-image";
 
 export type ProjectsProps = {
   pageTitle: string;

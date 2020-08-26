@@ -30,7 +30,7 @@ export default function Layout({ children, className = "" }: LayoutProps) {
     <>
       <Header siteTitle={title} />
       <div className={`container ${className}`}>{children}</div>
-      <div className={`container max-w-2xl`}>
+      <div className="container max-w-2xl">
         <Bio />
       </div>
       <Footer />

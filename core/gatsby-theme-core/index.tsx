@@ -14,7 +14,8 @@ export const ComponentPlaceholder = (props) => {
     >
       <h1>This is a placeholder component</h1>
       <p style={{ marginBottom: "2rem" }}>
-        To implement this component in your site, create a file at: <br />{" "}
+        To implement this component in your site, create a file at: <br />
+{" "}
         <code
           style={{
             color: "white",

@@ -1,5 +1,5 @@
-import React, { ReactNode } from "react";
 import cn from "classnames";
+import React, { ReactNode } from "react";
 
 export type FooterProps = {
   children?: ReactNode;
@@ -8,7 +8,7 @@ export type FooterProps = {
 
 export default function Footer({ children, className }: FooterProps) {
   return (
-    <footer className={cn(className, "bg-primary text-white")}>
+    <footer className={cn(className, "bg-gray-800 text-white")}>
       {children}
     </footer>
   );

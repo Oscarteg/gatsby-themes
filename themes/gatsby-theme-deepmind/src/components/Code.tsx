@@ -11,7 +11,7 @@ export default function Code({ children, className = "", live, render }) {
       <pre>
         <LiveProvider
           code={children.trim()}
-          transformCode={(code) => "/** @jsx mdx */\n" + code}
+          transformCode={(code) => `/** @jsx mdx */\n${code}`}
           scope={{ mdx }}
         >
           <LivePreview />

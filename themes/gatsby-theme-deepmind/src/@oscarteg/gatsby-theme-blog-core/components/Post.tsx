@@ -1,11 +1,11 @@
 import Img from "gatsby-image";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import React from "react";
+import { format, parseISO } from "date-fns";
 import PageTitle from "../../../components/PageTitle";
 import ProgressScroll from "../../../components/ProgressScroll";
 import Tags from "./Tags";
 import TableOfContents from "../../../components/TableOfContents";
-import { format, parseISO } from "date-fns";
 
 interface PostProps {
   title: string;

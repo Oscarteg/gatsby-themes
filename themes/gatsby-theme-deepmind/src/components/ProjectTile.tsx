@@ -35,7 +35,7 @@ export default function ProjectTile({
             fluid={image.thumbnail.fluid}
           />
         ) : (
-          <div className="w-full sm:w-1/4"></div>
+          <div className="w-full sm:w-1/4" />
         )}
 
         <div className="sm:w-3/4 sm:ml-8 mt-5">

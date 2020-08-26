@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
-import SEO from "../../../components/Seo";
 import { MDXRenderer } from "gatsby-plugin-mdx";
+import SEO from "../../../components/Seo";
 
 interface PageProps {
   body: any;
