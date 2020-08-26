@@ -2,10 +2,10 @@
   "name": "@oscarteg/gatsby-example-showoff",
   "private": true,
   "description": "An theme to showoff your own projects",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "author": "Oscar te Giffel <oscar@tegiffel.com>",
   "dependencies": {
-    "@oscarteg/gatsby-theme-showoff": "^0.0.9"
+    "@oscarteg/gatsby-theme-showoff": "^0.0.10"
   },
   "keywords": [
     "gatsby",
